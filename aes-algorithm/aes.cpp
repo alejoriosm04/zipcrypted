@@ -1,19 +1,18 @@
 #include <iostream>
-#include <vector>
+#include <cstdio>
+#include <algorithm>
 #include <cstring>
 
 using namespace std;
 
-// Definición de tipos de datos
+// Definición de tipos y constantes
 using aes_byte = unsigned char;
-using word = unsigned int;
 
-// Constantes de AES
-const int Nb = 4; // Número de columnas en la matriz de estado (AES siempre usa 4)
-const int Nk = 4; // Tamaño de la clave en palabras (4 para AES-128, 6 para AES-192, 8 para AES-256)
-const int Nr = 10; // Número de rondas (10 para AES-128, 12 para AES-192, 14 para AES-256)
+const int Nb = 4;   // Número de columnas en el estado (siempre 4 en AES)
+const int Nk = 4;   // Número de palabras de la clave (4 para AES-128)
+const int Nr = 10;  // Número de rondas (10 para AES-128)
 
-// S-Box para la sustitución en SubBytes
+// Tabla S-Box para la sustitución de bytes
 const aes_byte SBox[256] = {
     0x63, 0x7c, 0x77, 0x7b, 0xf2, 0x6b, 0x6f, 0xc5, 0x30, 0x01, 0x67, 0x2b, 0xfe, 0xd7, 0xab, 0x76,
     0xca, 0x82, 0xc9, 0x7d, 0xfa, 0x59, 0x47, 0xf0, 0xad, 0xd4, 0xa2, 0xaf, 0x9c, 0xa4, 0x72, 0xc0,
@@ -33,7 +32,6 @@ const aes_byte SBox[256] = {
     0x8c, 0xa1, 0x89, 0x0d, 0xbf, 0xe6, 0x42, 0x68, 0x41, 0x99, 0x2d, 0x0f, 0xb0, 0x54, 0xbb, 0x16
 };
 
-// Función KeyExpansion - Expande la clave para obtener claves de ronda
 void KeyExpansion(aes_byte key[16], aes_byte expandedKey[176]) {
     for (int i = 0; i < 16; i++) {
         expandedKey[i] = key[i];
@@ -47,7 +45,6 @@ void KeyExpansion(aes_byte key[16], aes_byte expandedKey[176]) {
     }
 }
 
-// Función AddRoundKey - Aplica XOR entre la clave de ronda y la matriz de estado
 void AddRoundKey(aes_byte state[4][4], aes_byte roundKey[4][4]) {
     for (int i = 0; i < 4; i++) {
         for (int j = 0; j < 4; j++) {
@@ -60,20 +57,23 @@ void AddRoundKey(aes_byte state[4][4], aes_byte roundKey[4][4]) {
 aes_byte galoisMult(aes_byte a, aes_byte b) {
     aes_byte p = 0;
     for (int i = 0; i < 8; i++) {
-        if (b & 1) p ^= a;
+        if (b & 1)
+            p ^= a;
         bool highBit = (a & 0x80);
         a <<= 1;
-        if (highBit) a ^= 0x1b;
+        if (highBit)
+            a ^= 0x1b;
         b >>= 1;
     }
     return p;
 }
 
-// Función MixColumns - Mezcla las columnas del estado
 void MixColumns(aes_byte state[4][4]) {
     aes_byte temp[4];
     for (int c = 0; c < 4; c++) {
-        for (int i = 0; i < 4; i++) temp[i] = state[i][c];
+        for (int i = 0; i < 4; i++) {
+            temp[i] = state[i][c];
+        }
         state[0][c] = galoisMult(temp[0], 2) ^ galoisMult(temp[1], 3) ^ temp[2] ^ temp[3];
         state[1][c] = temp[0] ^ galoisMult(temp[1], 2) ^ galoisMult(temp[2], 3) ^ temp[3];
         state[2][c] = temp[0] ^ temp[1] ^ galoisMult(temp[2], 2) ^ galoisMult(temp[3], 3);
@@ -81,21 +81,17 @@ void MixColumns(aes_byte state[4][4]) {
     }
 }
 
-// Función ShiftRows - Desplaza las filas del estado
 void ShiftRows(aes_byte state[4][4]) {
     aes_byte temp;
-    // Segunda fila: desplazamiento a la izquierda en 1 posición
     temp = state[1][0];
     state[1][0] = state[1][1];
     state[1][1] = state[1][2];
     state[1][2] = state[1][3];
     state[1][3] = temp;
     
-    // Tercera fila: desplazamiento a la izquierda en 2 posiciones
     swap(state[2][0], state[2][2]);
     swap(state[2][1], state[2][3]);
     
-    // Cuarta fila: desplazamiento a la izquierda en 3 posiciones
     temp = state[3][3];
     state[3][3] = state[3][2];
     state[3][2] = state[3][1];
@@ -103,7 +99,6 @@ void ShiftRows(aes_byte state[4][4]) {
     state[3][0] = temp;
 }
 
-// Función SubBytes - Sustitución de bytes usando la S-Box
 void SubBytes(aes_byte state[4][4]) {
     for (int i = 0; i < 4; i++) {
         for (int j = 0; j < 4; j++) {
@@ -112,7 +107,6 @@ void SubBytes(aes_byte state[4][4]) {
     }
 }
 
-// Función para imprimir una matriz de 4x4 bytes (usada para depuración)
 void printState(aes_byte state[4][4]) {
     for (int i = 0; i < 4; i++) {
         for (int j = 0; j < 4; j++) {
@@ -122,8 +116,61 @@ void printState(aes_byte state[4][4]) {
     }
 }
 
+// Extrae una subclave (round key) de 16 bytes de la clave expandida y la organiza en una matriz 4x4.
+void getRoundKey(const aes_byte expandedKey[176], int round, aes_byte roundKey[4][4]) {
+    // Cada ronda usa 16 bytes: ronda 0 usa bytes 0-15, ronda 1 usa bytes 16-31, etc.
+    int start = round * 16;
+    for (int i = 0; i < 16; i++) {
+        // Organiza la clave en formato columna (4x4)
+        roundKey[i % 4][i / 4] = expandedKey[start + i];
+    }
+}
+
+void AES_Encrypt(aes_byte state[4][4], const aes_byte expandedKey[176]) {
+    aes_byte roundKey[4][4];
+    
+    // Ronda inicial: se utiliza la clave original (primer bloque de 16 bytes)
+    getRoundKey(expandedKey, 0, roundKey);
+    AddRoundKey(state, roundKey);
+    
+    // Rondas 1 a 9
+    for (int round = 1; round < Nr; round++) {
+        SubBytes(state);
+        ShiftRows(state);
+        MixColumns(state);
+        getRoundKey(expandedKey, round, roundKey);
+        AddRoundKey(state, roundKey);
+    }
+    
+    // Ronda final (ronda 10): sin MixColumns
+    SubBytes(state);
+    ShiftRows(state);
+    getRoundKey(expandedKey, Nr, roundKey);
+    AddRoundKey(state, roundKey);
+}
+
 int main() {
-    // Inicialización de un bloque de estado con valores de prueba
+    // 1. Definir la clave original (16 bytes para AES-128)
+    aes_byte key[16] = {
+        0x2b, 0x28, 0xab, 0x09,
+        0x7e, 0xae, 0xf7, 0xcf,
+        0x15, 0xd2, 0x15, 0x4f,
+        0x16, 0xa6, 0x88, 0x3c
+    };
+
+    // 2. Generar la clave expandida (176 bytes)
+    aes_byte expandedKey[176];
+    KeyExpansion(key, expandedKey);
+
+    cout << "Clave expandida (KeyExpansion):" << endl;
+    for (int i = 0; i < 176; i++) {
+        printf("%02x ", expandedKey[i]);
+        if ((i + 1) % 16 == 0)
+            printf("\n");
+    }
+    cout << endl;
+
+    // 3. Definir el bloque de datos (estado) a cifrar (16 bytes organizados en matriz 4x4)
     aes_byte state[4][4] = {
         {0x32, 0x43, 0xf6, 0xa8},
         {0x88, 0x5a, 0x30, 0x8d},
@@ -131,36 +178,16 @@ int main() {
         {0xe0, 0x37, 0x07, 0x34}
     };
 
-    // Clave de ronda simulada
-    aes_byte roundKey[4][4] = {
-        {0x2b, 0x28, 0xab, 0x09},
-        {0x7e, 0xae, 0xf7, 0xcf},
-        {0x15, 0xd2, 0x15, 0x4f},
-        {0x16, 0xa6, 0x88, 0x3c}
-    };
-
-    cout << "Estado inicial:\n";
+    cout << "Estado inicial:" << endl;
     printState(state);
+    cout << endl;
 
-    // Aplicar SubBytes
-    SubBytes(state);
-    cout << "\nEstado después de SubBytes:\n";
-    printState(state);
+    // 4. Cifrar el estado completo utilizando AES_Encrypt
+    AES_Encrypt(state, expandedKey);
 
-    // Aplicar ShiftRows
-    ShiftRows(state);
-    cout << "\nEstado después de ShiftRows:\n";
+    cout << "Estado final (cifrado):" << endl;
     printState(state);
-
-    // Aplicar MixColumns
-    MixColumns(state);
-    cout << "\nEstado después de MixColumns:\n";
-    printState(state);
-
-    // Aplicar AddRoundKey
-    AddRoundKey(state, roundKey);
-    cout << "\nEstado después de AddRoundKey:\n";
-    printState(state);
+    cout << endl;
 
     return 0;
 }
