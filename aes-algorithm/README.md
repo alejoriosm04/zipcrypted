@@ -20,7 +20,7 @@ aes_algorithm/
  │     ├── AES.cpp              # Implementación de las funciones de encriptación AES-128 (modo ECB)
  │     ├── ManejadorArchivo.cpp # Implementación de la clase para manejo de archivos y procesamiento de encriptación
  │     └── main.cpp             # Punto de entrada que gestiona los argumentos de línea de comandos y llama a la función de encriptación
- └── Makefile                   # Script de compilación para generar el ejecutable 'aes_encrypt'
+ └── Makefile                   # Script de compilación para generar el ejecutable 'aes'
 ```
 
 ### Descripción de Archivos
