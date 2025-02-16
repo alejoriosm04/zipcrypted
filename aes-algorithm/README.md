@@ -92,4 +92,4 @@ aes_algorithm/
 
 3. Introduce la clave `"aesEncryptionKey"` y el contenido del archivo de encriptación en `encriptado_hex.txt`.
 
-4. Haz clic en **Dencrypt** y deberías obtener el mismo mensaje que encriptaste.
+4. Haz clic en **Dencrypt** y deberías obtener el mismo mensaje que se encuentra en `archivo.txt`.
