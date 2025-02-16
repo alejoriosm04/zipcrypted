@@ -23,17 +23,36 @@ bool ManejadorArchivo::leerArchivo(const std::string &nombreArchivo) {
     return true;
 }
 
-// Encripta el contenido leído y retorna el ciphertext en hexadecimal
+// Función auxiliar para aplicar padding PKCS#7 a un vector de bytes (para archivos binarios)
+static std::vector<aes_byte> applyPKCS7PaddingBinary(const std::vector<aes_byte>& data) {
+    size_t blockSize = AES_BLOCK_SIZE;
+    size_t inputLen = data.size();
+    size_t padLen = blockSize - (inputLen % blockSize);
+    if (padLen == 0)
+        padLen = blockSize; // Siempre se agrega un bloque de padding si ya es múltiplo
+    std::vector<aes_byte> padded = data;
+    for (size_t i = 0; i < padLen; i++) {
+        padded.push_back(static_cast<aes_byte>(padLen));
+    }
+    return padded;
+}
+
+// --- Modificación en la función encriptarArchivo ---
 std::string ManejadorArchivo::encriptarArchivo(const std::string &clave) {
-    // Convertir los datos leídos a string (se asume que es texto)
-    std::string inputText(datos.begin(), datos.end());
-    // Aplicar padding PKCS#7
-    std::vector<aes_byte> paddedData = applyPKCS7Padding(inputText);
+    // Ahora se utiliza directamente el vector de bytes 'datos'
+    // Aplicar padding PKCS#7 a los datos binarios
+    std::vector<aes_byte> paddedData = applyPKCS7PaddingBinary(datos);
     size_t totalBlocks = paddedData.size() / AES_BLOCK_SIZE;
 
-    // Preparar la clave: se toma la clave dada y se asegura que tenga 16 bytes
+    // Preparar la clave: se copia la clave dada y se asegura que tenga 16 bytes (rellenando con ceros si es necesario)
     aes_byte key[AES_KEY_SIZE] = {0};
     memcpy(key, clave.c_str(), std::min((size_t)AES_KEY_SIZE, clave.size()));
+
+    std::cout << "Clave (hexadecimal): ";
+    for (int i = 0; i < AES_KEY_SIZE; i++) {
+        printf("%02x", key[i]);
+    }
+    std::cout << std::endl;
 
     // Generar la clave expandida
     aes_byte expandedKey[AES_EXPANDED_KEY_SIZE];
@@ -51,7 +70,7 @@ std::string ManejadorArchivo::encriptarArchivo(const std::string &clave) {
         memcpy(&cipherData[block * AES_BLOCK_SIZE], blockOut, AES_BLOCK_SIZE);
     }
 
-    // Convertir el ciphertext a cadena hexadecimal
+    // Convertir el ciphertext a una cadena hexadecimal
     std::string hexOutput;
     char bufferHex[3];
     for (aes_byte byte : cipherData) {
