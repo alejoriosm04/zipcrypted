@@ -1,5 +1,6 @@
 #include "ManejadorArchivo.h"
 #include "aes_encryptor.h"
+#include "aes_decryptor.h"
 #include <fcntl.h>
 #include <unistd.h>
 #include <cstring>
@@ -94,4 +95,71 @@ bool ManejadorArchivo::escribirEncriptacion(const std::string &nombreArchivo, co
     }
     close(fd);
     return true;
+}
+
+bool ManejadorArchivo::escribirDesencriptacion(const std::string &nombreArchivo, const std::string &contenido) {
+    // Abrir archivo en modo texto (o binario, pero aquí conviene texto si es un archivo textual)
+    int fd = open(nombreArchivo.c_str(), O_WRONLY | O_CREAT | O_TRUNC, 0644);
+    if (fd == -1) {
+        std::cerr << "Error: No se pudo crear el archivo " << nombreArchivo << std::endl;
+        return false;
+    }
+    // Escribir el contenido desencriptado como texto
+    ssize_t bytesEscritos = write(fd, contenido.c_str(), contenido.size());
+    if (bytesEscritos == -1) {
+        std::cerr << "Error: No se pudo escribir en el archivo " << nombreArchivo << std::endl;
+        close(fd);
+        return false;
+    }
+    close(fd);
+    return true;
+}
+
+
+// Desencripta el archivo encriptado
+std::string ManejadorArchivo::desencriptarArchivo(const std::string &clave) {
+    // Convertir el contenido del archivo (hexadecimal) a bytes
+    std::string encryptedHex(datos.begin(), datos.end());
+
+    std::vector<aes_byte> encryptedBytes = hexStringToBytes(encryptedHex);
+    if (encryptedBytes.empty()) {
+        std::cerr << "Error: No se pudo convertir el hexadecimal en bytes" << std::endl;
+        return "";
+    }
+
+    size_t totalBlocks = encryptedBytes.size() / AES_BLOCK_SIZE;
+
+    // Preparar la clave de desencriptación
+    aes_byte key[AES_KEY_SIZE] = {0};
+    memcpy(key, clave.c_str(), std::min((size_t)AES_KEY_SIZE, clave.size()));
+
+    // Expansión de la clave AES
+    aes_byte expandedKey[AES_EXPANDED_KEY_SIZE];
+    KeyExpansion(key, expandedKey);
+
+    // Vector para almacenar la salida desencriptada
+    std::vector<aes_byte> plainData(totalBlocks * AES_BLOCK_SIZE);
+
+    // Desencriptar bloque por bloque
+    for (size_t block = 0; block < totalBlocks; block++) {
+        aes_byte blockIn[AES_BLOCK_SIZE], blockOut[AES_BLOCK_SIZE];
+        aes_byte state[4][4];
+
+        memcpy(blockIn, &encryptedBytes[block * AES_BLOCK_SIZE], AES_BLOCK_SIZE);
+        arrayToState(blockIn, state);
+        AES_Decrypt(state, expandedKey);
+        stateToArray(state, blockOut);
+
+        memcpy(&plainData[block * AES_BLOCK_SIZE], blockOut, AES_BLOCK_SIZE);
+    }
+
+    // Remover padding PKCS#7
+    std::vector<aes_byte> plainBytes = removePKCS7Padding(plainData);
+    if (plainBytes.empty()) {
+        std::cerr << "Error: La salida desencriptada está vacía después de remover padding" << std::endl;
+        return "";
+    }
+
+    // Convertir a string y devolver el resultado
+    return std::string(plainBytes.begin(), plainBytes.end());
 }
