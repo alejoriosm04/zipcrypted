@@ -1,0 +1,1100 @@
+LZW Compression Test. This file contains a variety of text patterns to evaluate compression.
+Repeating text patterns should be efficiently compressed. Example:
+ABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABA
+123123123123123123123123123123123123123123123123123123123123123123123123123123123123
+Unique sentences like: "This is a unique test sentence to check the efficiency of LZW."
+More unique content: The quick brown fox jumps over the lazy dog. Lorem ipsum dolor sit amet.
+Binary-like content: 010101010101010101010101010101010101010101010101010101010101
+Random characters: !@#$%^&*()_+{}|:"<>?`~-=[]\;',./
+Numbers and letters: A1B2C3D4E5F6G7H8I9J0K1L2M3N4O5P6Q7R8S9T0U1V2W3X4Y5Z6
+Mixing text, numbers, and symbols together to test various scenarios.
+End of test file.
+LZW Compression Test. This file contains a variety of text patterns to evaluate compression.
+Repeating text patterns should be efficiently compressed. Example:
+ABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABA
+123123123123123123123123123123123123123123123123123123123123123123123123123123123123
+Unique sentences like: "This is a unique test sentence to check the efficiency of LZW."
+More unique content: The quick brown fox jumps over the lazy dog. Lorem ipsum dolor sit amet.
+Binary-like content: 010101010101010101010101010101010101010101010101010101010101
+Random characters: !@#$%^&*()_+{}|:"<>?`~-=[]\;',./
+Numbers and letters: A1B2C3D4E5F6G7H8I9J0K1L2M3N4O5P6Q7R8S9T0U1V2W3X4Y5Z6
+Mixing text, numbers, and symbols together to test various scenarios.
+End of test file.
+LZW Compression Test. This file contains a variety of text patterns to evaluate compression.
+Repeating text patterns should be efficiently compressed. Example:
+ABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABA
+123123123123123123123123123123123123123123123123123123123123123123123123123123123123
+Unique sentences like: "This is a unique test sentence to check the efficiency of LZW."
+More unique content: The quick brown fox jumps over the lazy dog. Lorem ipsum dolor sit amet.
+Binary-like content: 010101010101010101010101010101010101010101010101010101010101
+Random characters: !@#$%^&*()_+{}|:"<>?`~-=[]\;',./
+Numbers and letters: A1B2C3D4E5F6G7H8I9J0K1L2M3N4O5P6Q7R8S9T0U1V2W3X4Y5Z6
+Mixing text, numbers, and symbols together to test various scenarios.
+End of test file.
+LZW Compression Test. This file contains a variety of text patterns to evaluate compression.
+Repeating text patterns should be efficiently compressed. Example:
+ABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABA
+123123123123123123123123123123123123123123123123123123123123123123123123123123123123
+Unique sentences like: "This is a unique test sentence to check the efficiency of LZW."
+More unique content: The quick brown fox jumps over the lazy dog. Lorem ipsum dolor sit amet.
+Binary-like content: 010101010101010101010101010101010101010101010101010101010101
+Random characters: !@#$%^&*()_+{}|:"<>?`~-=[]\;',./
+Numbers and letters: A1B2C3D4E5F6G7H8I9J0K1L2M3N4O5P6Q7R8S9T0U1V2W3X4Y5Z6
+Mixing text, numbers, and symbols together to test various scenarios.
+End of test file.
+LZW Compression Test. This file contains a variety of text patterns to evaluate compression.
+Repeating text patterns should be efficiently compressed. Example:
+ABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABA
+123123123123123123123123123123123123123123123123123123123123123123123123123123123123
+Unique sentences like: "This is a unique test sentence to check the efficiency of LZW."
+More unique content: The quick brown fox jumps over the lazy dog. Lorem ipsum dolor sit amet.
+Binary-like content: 010101010101010101010101010101010101010101010101010101010101
+Random characters: !@#$%^&*()_+{}|:"<>?`~-=[]\;',./
+Numbers and letters: A1B2C3D4E5F6G7H8I9J0K1L2M3N4O5P6Q7R8S9T0U1V2W3X4Y5Z6
+Mixing text, numbers, and symbols together to test various scenarios.
+End of test file.
+LZW Compression Test. This file contains a variety of text patterns to evaluate compression.
+Repeating text patterns should be efficiently compressed. Example:
+ABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABA
+123123123123123123123123123123123123123123123123123123123123123123123123123123123123
+Unique sentences like: "This is a unique test sentence to check the efficiency of LZW."
+More unique content: The quick brown fox jumps over the lazy dog. Lorem ipsum dolor sit amet.
+Binary-like content: 010101010101010101010101010101010101010101010101010101010101
+Random characters: !@#$%^&*()_+{}|:"<>?`~-=[]\;',./
+Numbers and letters: A1B2C3D4E5F6G7H8I9J0K1L2M3N4O5P6Q7R8S9T0U1V2W3X4Y5Z6
+Mixing text, numbers, and symbols together to test various scenarios.
+End of test file.
+LZW Compression Test. This file contains a variety of text patterns to evaluate compression.
+Repeating text patterns should be efficiently compressed. Example:
+ABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABA
+123123123123123123123123123123123123123123123123123123123123123123123123123123123123
+Unique sentences like: "This is a unique test sentence to check the efficiency of LZW."
+More unique content: The quick brown fox jumps over the lazy dog. Lorem ipsum dolor sit amet.
+Binary-like content: 010101010101010101010101010101010101010101010101010101010101
+Random characters: !@#$%^&*()_+{}|:"<>?`~-=[]\;',./
+Numbers and letters: A1B2C3D4E5F6G7H8I9J0K1L2M3N4O5P6Q7R8S9T0U1V2W3X4Y5Z6
+Mixing text, numbers, and symbols together to test various scenarios.
+End of test file.
+LZW Compression Test. This file contains a variety of text patterns to evaluate compression.
+Repeating text patterns should be efficiently compressed. Example:
+ABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABA
+123123123123123123123123123123123123123123123123123123123123123123123123123123123123
+Unique sentences like: "This is a unique test sentence to check the efficiency of LZW."
+More unique content: The quick brown fox jumps over the lazy dog. Lorem ipsum dolor sit amet.
+Binary-like content: 010101010101010101010101010101010101010101010101010101010101
+Random characters: !@#$%^&*()_+{}|:"<>?`~-=[]\;',./
+Numbers and letters: A1B2C3D4E5F6G7H8I9J0K1L2M3N4O5P6Q7R8S9T0U1V2W3X4Y5Z6
+Mixing text, numbers, and symbols together to test various scenarios.
+End of test file.
+LZW Compression Test. This file contains a variety of text patterns to evaluate compression.
+Repeating text patterns should be efficiently compressed. Example:
+ABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABA
+123123123123123123123123123123123123123123123123123123123123123123123123123123123123
+Unique sentences like: "This is a unique test sentence to check the efficiency of LZW."
+More unique content: The quick brown fox jumps over the lazy dog. Lorem ipsum dolor sit amet.
+Binary-like content: 010101010101010101010101010101010101010101010101010101010101
+Random characters: !@#$%^&*()_+{}|:"<>?`~-=[]\;',./
+Numbers and letters: A1B2C3D4E5F6G7H8I9J0K1L2M3N4O5P6Q7R8S9T0U1V2W3X4Y5Z6
+Mixing text, numbers, and symbols together to test various scenarios.
+End of test file.
+LZW Compression Test. This file contains a variety of text patterns to evaluate compression.
+Repeating text patterns should be efficiently compressed. Example:
+ABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABA
+123123123123123123123123123123123123123123123123123123123123123123123123123123123123
+Unique sentences like: "This is a unique test sentence to check the efficiency of LZW."
+More unique content: The quick brown fox jumps over the lazy dog. Lorem ipsum dolor sit amet.
+Binary-like content: 010101010101010101010101010101010101010101010101010101010101
+Random characters: !@#$%^&*()_+{}|:"<>?`~-=[]\;',./
+Numbers and letters: A1B2C3D4E5F6G7H8I9J0K1L2M3N4O5P6Q7R8S9T0U1V2W3X4Y5Z6
+Mixing text, numbers, and symbols together to test various scenarios.
+End of test file.
+LZW Compression Test. This file contains a variety of text patterns to evaluate compression.
+Repeating text patterns should be efficiently compressed. Example:
+ABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABA
+123123123123123123123123123123123123123123123123123123123123123123123123123123123123
+Unique sentences like: "This is a unique test sentence to check the efficiency of LZW."
+More unique content: The quick brown fox jumps over the lazy dog. Lorem ipsum dolor sit amet.
+Binary-like content: 010101010101010101010101010101010101010101010101010101010101
+Random characters: !@#$%^&*()_+{}|:"<>?`~-=[]\;',./
+Numbers and letters: A1B2C3D4E5F6G7H8I9J0K1L2M3N4O5P6Q7R8S9T0U1V2W3X4Y5Z6
+Mixing text, numbers, and symbols together to test various scenarios.
+End of test file.
+LZW Compression Test. This file contains a variety of text patterns to evaluate compression.
+Repeating text patterns should be efficiently compressed. Example:
+ABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABA
+123123123123123123123123123123123123123123123123123123123123123123123123123123123123
+Unique sentences like: "This is a unique test sentence to check the efficiency of LZW."
+More unique content: The quick brown fox jumps over the lazy dog. Lorem ipsum dolor sit amet.
+Binary-like content: 010101010101010101010101010101010101010101010101010101010101
+Random characters: !@#$%^&*()_+{}|:"<>?`~-=[]\;',./
+Numbers and letters: A1B2C3D4E5F6G7H8I9J0K1L2M3N4O5P6Q7R8S9T0U1V2W3X4Y5Z6
+Mixing text, numbers, and symbols together to test various scenarios.
+End of test file.
+LZW Compression Test. This file contains a variety of text patterns to evaluate compression.
+Repeating text patterns should be efficiently compressed. Example:
+ABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABA
+123123123123123123123123123123123123123123123123123123123123123123123123123123123123
+Unique sentences like: "This is a unique test sentence to check the efficiency of LZW."
+More unique content: The quick brown fox jumps over the lazy dog. Lorem ipsum dolor sit amet.
+Binary-like content: 010101010101010101010101010101010101010101010101010101010101
+Random characters: !@#$%^&*()_+{}|:"<>?`~-=[]\;',./
+Numbers and letters: A1B2C3D4E5F6G7H8I9J0K1L2M3N4O5P6Q7R8S9T0U1V2W3X4Y5Z6
+Mixing text, numbers, and symbols together to test various scenarios.
+End of test file.
+LZW Compression Test. This file contains a variety of text patterns to evaluate compression.
+Repeating text patterns should be efficiently compressed. Example:
+ABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABA
+123123123123123123123123123123123123123123123123123123123123123123123123123123123123
+Unique sentences like: "This is a unique test sentence to check the efficiency of LZW."
+More unique content: The quick brown fox jumps over the lazy dog. Lorem ipsum dolor sit amet.
+Binary-like content: 010101010101010101010101010101010101010101010101010101010101
+Random characters: !@#$%^&*()_+{}|:"<>?`~-=[]\;',./
+Numbers and letters: A1B2C3D4E5F6G7H8I9J0K1L2M3N4O5P6Q7R8S9T0U1V2W3X4Y5Z6
+Mixing text, numbers, and symbols together to test various scenarios.
+End of test file.
+LZW Compression Test. This file contains a variety of text patterns to evaluate compression.
+Repeating text patterns should be efficiently compressed. Example:
+ABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABA
+123123123123123123123123123123123123123123123123123123123123123123123123123123123123
+Unique sentences like: "This is a unique test sentence to check the efficiency of LZW."
+More unique content: The quick brown fox jumps over the lazy dog. Lorem ipsum dolor sit amet.
+Binary-like content: 010101010101010101010101010101010101010101010101010101010101
+Random characters: !@#$%^&*()_+{}|:"<>?`~-=[]\;',./
+Numbers and letters: A1B2C3D4E5F6G7H8I9J0K1L2M3N4O5P6Q7R8S9T0U1V2W3X4Y5Z6
+Mixing text, numbers, and symbols together to test various scenarios.
+End of test file.
+LZW Compression Test. This file contains a variety of text patterns to evaluate compression.
+Repeating text patterns should be efficiently compressed. Example:
+ABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABA
+123123123123123123123123123123123123123123123123123123123123123123123123123123123123
+Unique sentences like: "This is a unique test sentence to check the efficiency of LZW."
+More unique content: The quick brown fox jumps over the lazy dog. Lorem ipsum dolor sit amet.
+Binary-like content: 010101010101010101010101010101010101010101010101010101010101
+Random characters: !@#$%^&*()_+{}|:"<>?`~-=[]\;',./
+Numbers and letters: A1B2C3D4E5F6G7H8I9J0K1L2M3N4O5P6Q7R8S9T0U1V2W3X4Y5Z6
+Mixing text, numbers, and symbols together to test various scenarios.
+End of test file.
+LZW Compression Test. This file contains a variety of text patterns to evaluate compression.
+Repeating text patterns should be efficiently compressed. Example:
+ABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABA
+123123123123123123123123123123123123123123123123123123123123123123123123123123123123
+Unique sentences like: "This is a unique test sentence to check the efficiency of LZW."
+More unique content: The quick brown fox jumps over the lazy dog. Lorem ipsum dolor sit amet.
+Binary-like content: 010101010101010101010101010101010101010101010101010101010101
+Random characters: !@#$%^&*()_+{}|:"<>?`~-=[]\;',./
+Numbers and letters: A1B2C3D4E5F6G7H8I9J0K1L2M3N4O5P6Q7R8S9T0U1V2W3X4Y5Z6
+Mixing text, numbers, and symbols together to test various scenarios.
+End of test file.
+LZW Compression Test. This file contains a variety of text patterns to evaluate compression.
+Repeating text patterns should be efficiently compressed. Example:
+ABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABA
+123123123123123123123123123123123123123123123123123123123123123123123123123123123123
+Unique sentences like: "This is a unique test sentence to check the efficiency of LZW."
+More unique content: The quick brown fox jumps over the lazy dog. Lorem ipsum dolor sit amet.
+Binary-like content: 010101010101010101010101010101010101010101010101010101010101
+Random characters: !@#$%^&*()_+{}|:"<>?`~-=[]\;',./
+Numbers and letters: A1B2C3D4E5F6G7H8I9J0K1L2M3N4O5P6Q7R8S9T0U1V2W3X4Y5Z6
+Mixing text, numbers, and symbols together to test various scenarios.
+End of test file.
+LZW Compression Test. This file contains a variety of text patterns to evaluate compression.
+Repeating text patterns should be efficiently compressed. Example:
+ABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABA
+123123123123123123123123123123123123123123123123123123123123123123123123123123123123
+Unique sentences like: "This is a unique test sentence to check the efficiency of LZW."
+More unique content: The quick brown fox jumps over the lazy dog. Lorem ipsum dolor sit amet.
+Binary-like content: 010101010101010101010101010101010101010101010101010101010101
+Random characters: !@#$%^&*()_+{}|:"<>?`~-=[]\;',./
+Numbers and letters: A1B2C3D4E5F6G7H8I9J0K1L2M3N4O5P6Q7R8S9T0U1V2W3X4Y5Z6
+Mixing text, numbers, and symbols together to test various scenarios.
+End of test file.
+LZW Compression Test. This file contains a variety of text patterns to evaluate compression.
+Repeating text patterns should be efficiently compressed. Example:
+ABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABA
+123123123123123123123123123123123123123123123123123123123123123123123123123123123123
+Unique sentences like: "This is a unique test sentence to check the efficiency of LZW."
+More unique content: The quick brown fox jumps over the lazy dog. Lorem ipsum dolor sit amet.
+Binary-like content: 010101010101010101010101010101010101010101010101010101010101
+Random characters: !@#$%^&*()_+{}|:"<>?`~-=[]\;',./
+Numbers and letters: A1B2C3D4E5F6G7H8I9J0K1L2M3N4O5P6Q7R8S9T0U1V2W3X4Y5Z6
+Mixing text, numbers, and symbols together to test various scenarios.
+End of test file.
+LZW Compression Test. This file contains a variety of text patterns to evaluate compression.
+Repeating text patterns should be efficiently compressed. Example:
+ABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABA
+123123123123123123123123123123123123123123123123123123123123123123123123123123123123
+Unique sentences like: "This is a unique test sentence to check the efficiency of LZW."
+More unique content: The quick brown fox jumps over the lazy dog. Lorem ipsum dolor sit amet.
+Binary-like content: 010101010101010101010101010101010101010101010101010101010101
+Random characters: !@#$%^&*()_+{}|:"<>?`~-=[]\;',./
+Numbers and letters: A1B2C3D4E5F6G7H8I9J0K1L2M3N4O5P6Q7R8S9T0U1V2W3X4Y5Z6
+Mixing text, numbers, and symbols together to test various scenarios.
+End of test file.
+LZW Compression Test. This file contains a variety of text patterns to evaluate compression.
+Repeating text patterns should be efficiently compressed. Example:
+ABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABA
+123123123123123123123123123123123123123123123123123123123123123123123123123123123123
+Unique sentences like: "This is a unique test sentence to check the efficiency of LZW."
+More unique content: The quick brown fox jumps over the lazy dog. Lorem ipsum dolor sit amet.
+Binary-like content: 010101010101010101010101010101010101010101010101010101010101
+Random characters: !@#$%^&*()_+{}|:"<>?`~-=[]\;',./
+Numbers and letters: A1B2C3D4E5F6G7H8I9J0K1L2M3N4O5P6Q7R8S9T0U1V2W3X4Y5Z6
+Mixing text, numbers, and symbols together to test various scenarios.
+End of test file.
+LZW Compression Test. This file contains a variety of text patterns to evaluate compression.
+Repeating text patterns should be efficiently compressed. Example:
+ABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABA
+123123123123123123123123123123123123123123123123123123123123123123123123123123123123
+Unique sentences like: "This is a unique test sentence to check the efficiency of LZW."
+More unique content: The quick brown fox jumps over the lazy dog. Lorem ipsum dolor sit amet.
+Binary-like content: 010101010101010101010101010101010101010101010101010101010101
+Random characters: !@#$%^&*()_+{}|:"<>?`~-=[]\;',./
+Numbers and letters: A1B2C3D4E5F6G7H8I9J0K1L2M3N4O5P6Q7R8S9T0U1V2W3X4Y5Z6
+Mixing text, numbers, and symbols together to test various scenarios.
+End of test file.
+LZW Compression Test. This file contains a variety of text patterns to evaluate compression.
+Repeating text patterns should be efficiently compressed. Example:
+ABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABA
+123123123123123123123123123123123123123123123123123123123123123123123123123123123123
+Unique sentences like: "This is a unique test sentence to check the efficiency of LZW."
+More unique content: The quick brown fox jumps over the lazy dog. Lorem ipsum dolor sit amet.
+Binary-like content: 010101010101010101010101010101010101010101010101010101010101
+Random characters: !@#$%^&*()_+{}|:"<>?`~-=[]\;',./
+Numbers and letters: A1B2C3D4E5F6G7H8I9J0K1L2M3N4O5P6Q7R8S9T0U1V2W3X4Y5Z6
+Mixing text, numbers, and symbols together to test various scenarios.
+End of test file.
+LZW Compression Test. This file contains a variety of text patterns to evaluate compression.
+Repeating text patterns should be efficiently compressed. Example:
+ABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABA
+123123123123123123123123123123123123123123123123123123123123123123123123123123123123
+Unique sentences like: "This is a unique test sentence to check the efficiency of LZW."
+More unique content: The quick brown fox jumps over the lazy dog. Lorem ipsum dolor sit amet.
+Binary-like content: 010101010101010101010101010101010101010101010101010101010101
+Random characters: !@#$%^&*()_+{}|:"<>?`~-=[]\;',./
+Numbers and letters: A1B2C3D4E5F6G7H8I9J0K1L2M3N4O5P6Q7R8S9T0U1V2W3X4Y5Z6
+Mixing text, numbers, and symbols together to test various scenarios.
+End of test file.
+LZW Compression Test. This file contains a variety of text patterns to evaluate compression.
+Repeating text patterns should be efficiently compressed. Example:
+ABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABA
+123123123123123123123123123123123123123123123123123123123123123123123123123123123123
+Unique sentences like: "This is a unique test sentence to check the efficiency of LZW."
+More unique content: The quick brown fox jumps over the lazy dog. Lorem ipsum dolor sit amet.
+Binary-like content: 010101010101010101010101010101010101010101010101010101010101
+Random characters: !@#$%^&*()_+{}|:"<>?`~-=[]\;',./
+Numbers and letters: A1B2C3D4E5F6G7H8I9J0K1L2M3N4O5P6Q7R8S9T0U1V2W3X4Y5Z6
+Mixing text, numbers, and symbols together to test various scenarios.
+End of test file.
+LZW Compression Test. This file contains a variety of text patterns to evaluate compression.
+Repeating text patterns should be efficiently compressed. Example:
+ABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABA
+123123123123123123123123123123123123123123123123123123123123123123123123123123123123
+Unique sentences like: "This is a unique test sentence to check the efficiency of LZW."
+More unique content: The quick brown fox jumps over the lazy dog. Lorem ipsum dolor sit amet.
+Binary-like content: 010101010101010101010101010101010101010101010101010101010101
+Random characters: !@#$%^&*()_+{}|:"<>?`~-=[]\;',./
+Numbers and letters: A1B2C3D4E5F6G7H8I9J0K1L2M3N4O5P6Q7R8S9T0U1V2W3X4Y5Z6
+Mixing text, numbers, and symbols together to test various scenarios.
+End of test file.
+LZW Compression Test. This file contains a variety of text patterns to evaluate compression.
+Repeating text patterns should be efficiently compressed. Example:
+ABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABA
+123123123123123123123123123123123123123123123123123123123123123123123123123123123123
+Unique sentences like: "This is a unique test sentence to check the efficiency of LZW."
+More unique content: The quick brown fox jumps over the lazy dog. Lorem ipsum dolor sit amet.
+Binary-like content: 010101010101010101010101010101010101010101010101010101010101
+Random characters: !@#$%^&*()_+{}|:"<>?`~-=[]\;',./
+Numbers and letters: A1B2C3D4E5F6G7H8I9J0K1L2M3N4O5P6Q7R8S9T0U1V2W3X4Y5Z6
+Mixing text, numbers, and symbols together to test various scenarios.
+End of test file.
+LZW Compression Test. This file contains a variety of text patterns to evaluate compression.
+Repeating text patterns should be efficiently compressed. Example:
+ABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABA
+123123123123123123123123123123123123123123123123123123123123123123123123123123123123
+Unique sentences like: "This is a unique test sentence to check the efficiency of LZW."
+More unique content: The quick brown fox jumps over the lazy dog. Lorem ipsum dolor sit amet.
+Binary-like content: 010101010101010101010101010101010101010101010101010101010101
+Random characters: !@#$%^&*()_+{}|:"<>?`~-=[]\;',./
+Numbers and letters: A1B2C3D4E5F6G7H8I9J0K1L2M3N4O5P6Q7R8S9T0U1V2W3X4Y5Z6
+Mixing text, numbers, and symbols together to test various scenarios.
+End of test file.
+LZW Compression Test. This file contains a variety of text patterns to evaluate compression.
+Repeating text patterns should be efficiently compressed. Example:
+ABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABA
+123123123123123123123123123123123123123123123123123123123123123123123123123123123123
+Unique sentences like: "This is a unique test sentence to check the efficiency of LZW."
+More unique content: The quick brown fox jumps over the lazy dog. Lorem ipsum dolor sit amet.
+Binary-like content: 010101010101010101010101010101010101010101010101010101010101
+Random characters: !@#$%^&*()_+{}|:"<>?`~-=[]\;',./
+Numbers and letters: A1B2C3D4E5F6G7H8I9J0K1L2M3N4O5P6Q7R8S9T0U1V2W3X4Y5Z6
+Mixing text, numbers, and symbols together to test various scenarios.
+End of test file.
+LZW Compression Test. This file contains a variety of text patterns to evaluate compression.
+Repeating text patterns should be efficiently compressed. Example:
+ABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABA
+123123123123123123123123123123123123123123123123123123123123123123123123123123123123
+Unique sentences like: "This is a unique test sentence to check the efficiency of LZW."
+More unique content: The quick brown fox jumps over the lazy dog. Lorem ipsum dolor sit amet.
+Binary-like content: 010101010101010101010101010101010101010101010101010101010101
+Random characters: !@#$%^&*()_+{}|:"<>?`~-=[]\;',./
+Numbers and letters: A1B2C3D4E5F6G7H8I9J0K1L2M3N4O5P6Q7R8S9T0U1V2W3X4Y5Z6
+Mixing text, numbers, and symbols together to test various scenarios.
+End of test file.
+LZW Compression Test. This file contains a variety of text patterns to evaluate compression.
+Repeating text patterns should be efficiently compressed. Example:
+ABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABA
+123123123123123123123123123123123123123123123123123123123123123123123123123123123123
+Unique sentences like: "This is a unique test sentence to check the efficiency of LZW."
+More unique content: The quick brown fox jumps over the lazy dog. Lorem ipsum dolor sit amet.
+Binary-like content: 010101010101010101010101010101010101010101010101010101010101
+Random characters: !@#$%^&*()_+{}|:"<>?`~-=[]\;',./
+Numbers and letters: A1B2C3D4E5F6G7H8I9J0K1L2M3N4O5P6Q7R8S9T0U1V2W3X4Y5Z6
+Mixing text, numbers, and symbols together to test various scenarios.
+End of test file.
+LZW Compression Test. This file contains a variety of text patterns to evaluate compression.
+Repeating text patterns should be efficiently compressed. Example:
+ABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABA
+123123123123123123123123123123123123123123123123123123123123123123123123123123123123
+Unique sentences like: "This is a unique test sentence to check the efficiency of LZW."
+More unique content: The quick brown fox jumps over the lazy dog. Lorem ipsum dolor sit amet.
+Binary-like content: 010101010101010101010101010101010101010101010101010101010101
+Random characters: !@#$%^&*()_+{}|:"<>?`~-=[]\;',./
+Numbers and letters: A1B2C3D4E5F6G7H8I9J0K1L2M3N4O5P6Q7R8S9T0U1V2W3X4Y5Z6
+Mixing text, numbers, and symbols together to test various scenarios.
+End of test file.
+LZW Compression Test. This file contains a variety of text patterns to evaluate compression.
+Repeating text patterns should be efficiently compressed. Example:
+ABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABA
+123123123123123123123123123123123123123123123123123123123123123123123123123123123123
+Unique sentences like: "This is a unique test sentence to check the efficiency of LZW."
+More unique content: The quick brown fox jumps over the lazy dog. Lorem ipsum dolor sit amet.
+Binary-like content: 010101010101010101010101010101010101010101010101010101010101
+Random characters: !@#$%^&*()_+{}|:"<>?`~-=[]\;',./
+Numbers and letters: A1B2C3D4E5F6G7H8I9J0K1L2M3N4O5P6Q7R8S9T0U1V2W3X4Y5Z6
+Mixing text, numbers, and symbols together to test various scenarios.
+End of test file.
+LZW Compression Test. This file contains a variety of text patterns to evaluate compression.
+Repeating text patterns should be efficiently compressed. Example:
+ABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABA
+123123123123123123123123123123123123123123123123123123123123123123123123123123123123
+Unique sentences like: "This is a unique test sentence to check the efficiency of LZW."
+More unique content: The quick brown fox jumps over the lazy dog. Lorem ipsum dolor sit amet.
+Binary-like content: 010101010101010101010101010101010101010101010101010101010101
+Random characters: !@#$%^&*()_+{}|:"<>?`~-=[]\;',./
+Numbers and letters: A1B2C3D4E5F6G7H8I9J0K1L2M3N4O5P6Q7R8S9T0U1V2W3X4Y5Z6
+Mixing text, numbers, and symbols together to test various scenarios.
+End of test file.
+LZW Compression Test. This file contains a variety of text patterns to evaluate compression.
+Repeating text patterns should be efficiently compressed. Example:
+ABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABA
+123123123123123123123123123123123123123123123123123123123123123123123123123123123123
+Unique sentences like: "This is a unique test sentence to check the efficiency of LZW."
+More unique content: The quick brown fox jumps over the lazy dog. Lorem ipsum dolor sit amet.
+Binary-like content: 010101010101010101010101010101010101010101010101010101010101
+Random characters: !@#$%^&*()_+{}|:"<>?`~-=[]\;',./
+Numbers and letters: A1B2C3D4E5F6G7H8I9J0K1L2M3N4O5P6Q7R8S9T0U1V2W3X4Y5Z6
+Mixing text, numbers, and symbols together to test various scenarios.
+End of test file.
+LZW Compression Test. This file contains a variety of text patterns to evaluate compression.
+Repeating text patterns should be efficiently compressed. Example:
+ABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABA
+123123123123123123123123123123123123123123123123123123123123123123123123123123123123
+Unique sentences like: "This is a unique test sentence to check the efficiency of LZW."
+More unique content: The quick brown fox jumps over the lazy dog. Lorem ipsum dolor sit amet.
+Binary-like content: 010101010101010101010101010101010101010101010101010101010101
+Random characters: !@#$%^&*()_+{}|:"<>?`~-=[]\;',./
+Numbers and letters: A1B2C3D4E5F6G7H8I9J0K1L2M3N4O5P6Q7R8S9T0U1V2W3X4Y5Z6
+Mixing text, numbers, and symbols together to test various scenarios.
+End of test file.
+LZW Compression Test. This file contains a variety of text patterns to evaluate compression.
+Repeating text patterns should be efficiently compressed. Example:
+ABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABA
+123123123123123123123123123123123123123123123123123123123123123123123123123123123123
+Unique sentences like: "This is a unique test sentence to check the efficiency of LZW."
+More unique content: The quick brown fox jumps over the lazy dog. Lorem ipsum dolor sit amet.
+Binary-like content: 010101010101010101010101010101010101010101010101010101010101
+Random characters: !@#$%^&*()_+{}|:"<>?`~-=[]\;',./
+Numbers and letters: A1B2C3D4E5F6G7H8I9J0K1L2M3N4O5P6Q7R8S9T0U1V2W3X4Y5Z6
+Mixing text, numbers, and symbols together to test various scenarios.
+End of test file.
+LZW Compression Test. This file contains a variety of text patterns to evaluate compression.
+Repeating text patterns should be efficiently compressed. Example:
+ABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABA
+123123123123123123123123123123123123123123123123123123123123123123123123123123123123
+Unique sentences like: "This is a unique test sentence to check the efficiency of LZW."
+More unique content: The quick brown fox jumps over the lazy dog. Lorem ipsum dolor sit amet.
+Binary-like content: 010101010101010101010101010101010101010101010101010101010101
+Random characters: !@#$%^&*()_+{}|:"<>?`~-=[]\;',./
+Numbers and letters: A1B2C3D4E5F6G7H8I9J0K1L2M3N4O5P6Q7R8S9T0U1V2W3X4Y5Z6
+Mixing text, numbers, and symbols together to test various scenarios.
+End of test file.
+LZW Compression Test. This file contains a variety of text patterns to evaluate compression.
+Repeating text patterns should be efficiently compressed. Example:
+ABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABA
+123123123123123123123123123123123123123123123123123123123123123123123123123123123123
+Unique sentences like: "This is a unique test sentence to check the efficiency of LZW."
+More unique content: The quick brown fox jumps over the lazy dog. Lorem ipsum dolor sit amet.
+Binary-like content: 010101010101010101010101010101010101010101010101010101010101
+Random characters: !@#$%^&*()_+{}|:"<>?`~-=[]\;',./
+Numbers and letters: A1B2C3D4E5F6G7H8I9J0K1L2M3N4O5P6Q7R8S9T0U1V2W3X4Y5Z6
+Mixing text, numbers, and symbols together to test various scenarios.
+End of test file.
+LZW Compression Test. This file contains a variety of text patterns to evaluate compression.
+Repeating text patterns should be efficiently compressed. Example:
+ABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABA
+123123123123123123123123123123123123123123123123123123123123123123123123123123123123
+Unique sentences like: "This is a unique test sentence to check the efficiency of LZW."
+More unique content: The quick brown fox jumps over the lazy dog. Lorem ipsum dolor sit amet.
+Binary-like content: 010101010101010101010101010101010101010101010101010101010101
+Random characters: !@#$%^&*()_+{}|:"<>?`~-=[]\;',./
+Numbers and letters: A1B2C3D4E5F6G7H8I9J0K1L2M3N4O5P6Q7R8S9T0U1V2W3X4Y5Z6
+Mixing text, numbers, and symbols together to test various scenarios.
+End of test file.
+LZW Compression Test. This file contains a variety of text patterns to evaluate compression.
+Repeating text patterns should be efficiently compressed. Example:
+ABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABA
+123123123123123123123123123123123123123123123123123123123123123123123123123123123123
+Unique sentences like: "This is a unique test sentence to check the efficiency of LZW."
+More unique content: The quick brown fox jumps over the lazy dog. Lorem ipsum dolor sit amet.
+Binary-like content: 010101010101010101010101010101010101010101010101010101010101
+Random characters: !@#$%^&*()_+{}|:"<>?`~-=[]\;',./
+Numbers and letters: A1B2C3D4E5F6G7H8I9J0K1L2M3N4O5P6Q7R8S9T0U1V2W3X4Y5Z6
+Mixing text, numbers, and symbols together to test various scenarios.
+End of test file.
+LZW Compression Test. This file contains a variety of text patterns to evaluate compression.
+Repeating text patterns should be efficiently compressed. Example:
+ABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABA
+123123123123123123123123123123123123123123123123123123123123123123123123123123123123
+Unique sentences like: "This is a unique test sentence to check the efficiency of LZW."
+More unique content: The quick brown fox jumps over the lazy dog. Lorem ipsum dolor sit amet.
+Binary-like content: 010101010101010101010101010101010101010101010101010101010101
+Random characters: !@#$%^&*()_+{}|:"<>?`~-=[]\;',./
+Numbers and letters: A1B2C3D4E5F6G7H8I9J0K1L2M3N4O5P6Q7R8S9T0U1V2W3X4Y5Z6
+Mixing text, numbers, and symbols together to test various scenarios.
+End of test file.
+LZW Compression Test. This file contains a variety of text patterns to evaluate compression.
+Repeating text patterns should be efficiently compressed. Example:
+ABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABA
+123123123123123123123123123123123123123123123123123123123123123123123123123123123123
+Unique sentences like: "This is a unique test sentence to check the efficiency of LZW."
+More unique content: The quick brown fox jumps over the lazy dog. Lorem ipsum dolor sit amet.
+Binary-like content: 010101010101010101010101010101010101010101010101010101010101
+Random characters: !@#$%^&*()_+{}|:"<>?`~-=[]\;',./
+Numbers and letters: A1B2C3D4E5F6G7H8I9J0K1L2M3N4O5P6Q7R8S9T0U1V2W3X4Y5Z6
+Mixing text, numbers, and symbols together to test various scenarios.
+End of test file.
+LZW Compression Test. This file contains a variety of text patterns to evaluate compression.
+Repeating text patterns should be efficiently compressed. Example:
+ABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABA
+123123123123123123123123123123123123123123123123123123123123123123123123123123123123
+Unique sentences like: "This is a unique test sentence to check the efficiency of LZW."
+More unique content: The quick brown fox jumps over the lazy dog. Lorem ipsum dolor sit amet.
+Binary-like content: 010101010101010101010101010101010101010101010101010101010101
+Random characters: !@#$%^&*()_+{}|:"<>?`~-=[]\;',./
+Numbers and letters: A1B2C3D4E5F6G7H8I9J0K1L2M3N4O5P6Q7R8S9T0U1V2W3X4Y5Z6
+Mixing text, numbers, and symbols together to test various scenarios.
+End of test file.
+LZW Compression Test. This file contains a variety of text patterns to evaluate compression.
+Repeating text patterns should be efficiently compressed. Example:
+ABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABA
+123123123123123123123123123123123123123123123123123123123123123123123123123123123123
+Unique sentences like: "This is a unique test sentence to check the efficiency of LZW."
+More unique content: The quick brown fox jumps over the lazy dog. Lorem ipsum dolor sit amet.
+Binary-like content: 010101010101010101010101010101010101010101010101010101010101
+Random characters: !@#$%^&*()_+{}|:"<>?`~-=[]\;',./
+Numbers and letters: A1B2C3D4E5F6G7H8I9J0K1L2M3N4O5P6Q7R8S9T0U1V2W3X4Y5Z6
+Mixing text, numbers, and symbols together to test various scenarios.
+End of test file.
+LZW Compression Test. This file contains a variety of text patterns to evaluate compression.
+Repeating text patterns should be efficiently compressed. Example:
+ABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABA
+123123123123123123123123123123123123123123123123123123123123123123123123123123123123
+Unique sentences like: "This is a unique test sentence to check the efficiency of LZW."
+More unique content: The quick brown fox jumps over the lazy dog. Lorem ipsum dolor sit amet.
+Binary-like content: 010101010101010101010101010101010101010101010101010101010101
+Random characters: !@#$%^&*()_+{}|:"<>?`~-=[]\;',./
+Numbers and letters: A1B2C3D4E5F6G7H8I9J0K1L2M3N4O5P6Q7R8S9T0U1V2W3X4Y5Z6
+Mixing text, numbers, and symbols together to test various scenarios.
+End of test file.
+LZW Compression Test. This file contains a variety of text patterns to evaluate compression.
+Repeating text patterns should be efficiently compressed. Example:
+ABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABA
+123123123123123123123123123123123123123123123123123123123123123123123123123123123123
+Unique sentences like: "This is a unique test sentence to check the efficiency of LZW."
+More unique content: The quick brown fox jumps over the lazy dog. Lorem ipsum dolor sit amet.
+Binary-like content: 010101010101010101010101010101010101010101010101010101010101
+Random characters: !@#$%^&*()_+{}|:"<>?`~-=[]\;',./
+Numbers and letters: A1B2C3D4E5F6G7H8I9J0K1L2M3N4O5P6Q7R8S9T0U1V2W3X4Y5Z6
+Mixing text, numbers, and symbols together to test various scenarios.
+End of test file.
+LZW Compression Test. This file contains a variety of text patterns to evaluate compression.
+Repeating text patterns should be efficiently compressed. Example:
+ABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABA
+123123123123123123123123123123123123123123123123123123123123123123123123123123123123
+Unique sentences like: "This is a unique test sentence to check the efficiency of LZW."
+More unique content: The quick brown fox jumps over the lazy dog. Lorem ipsum dolor sit amet.
+Binary-like content: 010101010101010101010101010101010101010101010101010101010101
+Random characters: !@#$%^&*()_+{}|:"<>?`~-=[]\;',./
+Numbers and letters: A1B2C3D4E5F6G7H8I9J0K1L2M3N4O5P6Q7R8S9T0U1V2W3X4Y5Z6
+Mixing text, numbers, and symbols together to test various scenarios.
+End of test file.
+LZW Compression Test. This file contains a variety of text patterns to evaluate compression.
+Repeating text patterns should be efficiently compressed. Example:
+ABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABA
+123123123123123123123123123123123123123123123123123123123123123123123123123123123123
+Unique sentences like: "This is a unique test sentence to check the efficiency of LZW."
+More unique content: The quick brown fox jumps over the lazy dog. Lorem ipsum dolor sit amet.
+Binary-like content: 010101010101010101010101010101010101010101010101010101010101
+Random characters: !@#$%^&*()_+{}|:"<>?`~-=[]\;',./
+Numbers and letters: A1B2C3D4E5F6G7H8I9J0K1L2M3N4O5P6Q7R8S9T0U1V2W3X4Y5Z6
+Mixing text, numbers, and symbols together to test various scenarios.
+End of test file.
+LZW Compression Test. This file contains a variety of text patterns to evaluate compression.
+Repeating text patterns should be efficiently compressed. Example:
+ABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABA
+123123123123123123123123123123123123123123123123123123123123123123123123123123123123
+Unique sentences like: "This is a unique test sentence to check the efficiency of LZW."
+More unique content: The quick brown fox jumps over the lazy dog. Lorem ipsum dolor sit amet.
+Binary-like content: 010101010101010101010101010101010101010101010101010101010101
+Random characters: !@#$%^&*()_+{}|:"<>?`~-=[]\;',./
+Numbers and letters: A1B2C3D4E5F6G7H8I9J0K1L2M3N4O5P6Q7R8S9T0U1V2W3X4Y5Z6
+Mixing text, numbers, and symbols together to test various scenarios.
+End of test file.
+LZW Compression Test. This file contains a variety of text patterns to evaluate compression.
+Repeating text patterns should be efficiently compressed. Example:
+ABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABA
+123123123123123123123123123123123123123123123123123123123123123123123123123123123123
+Unique sentences like: "This is a unique test sentence to check the efficiency of LZW."
+More unique content: The quick brown fox jumps over the lazy dog. Lorem ipsum dolor sit amet.
+Binary-like content: 010101010101010101010101010101010101010101010101010101010101
+Random characters: !@#$%^&*()_+{}|:"<>?`~-=[]\;',./
+Numbers and letters: A1B2C3D4E5F6G7H8I9J0K1L2M3N4O5P6Q7R8S9T0U1V2W3X4Y5Z6
+Mixing text, numbers, and symbols together to test various scenarios.
+End of test file.
+LZW Compression Test. This file contains a variety of text patterns to evaluate compression.
+Repeating text patterns should be efficiently compressed. Example:
+ABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABA
+123123123123123123123123123123123123123123123123123123123123123123123123123123123123
+Unique sentences like: "This is a unique test sentence to check the efficiency of LZW."
+More unique content: The quick brown fox jumps over the lazy dog. Lorem ipsum dolor sit amet.
+Binary-like content: 010101010101010101010101010101010101010101010101010101010101
+Random characters: !@#$%^&*()_+{}|:"<>?`~-=[]\;',./
+Numbers and letters: A1B2C3D4E5F6G7H8I9J0K1L2M3N4O5P6Q7R8S9T0U1V2W3X4Y5Z6
+Mixing text, numbers, and symbols together to test various scenarios.
+End of test file.
+LZW Compression Test. This file contains a variety of text patterns to evaluate compression.
+Repeating text patterns should be efficiently compressed. Example:
+ABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABA
+123123123123123123123123123123123123123123123123123123123123123123123123123123123123
+Unique sentences like: "This is a unique test sentence to check the efficiency of LZW."
+More unique content: The quick brown fox jumps over the lazy dog. Lorem ipsum dolor sit amet.
+Binary-like content: 010101010101010101010101010101010101010101010101010101010101
+Random characters: !@#$%^&*()_+{}|:"<>?`~-=[]\;',./
+Numbers and letters: A1B2C3D4E5F6G7H8I9J0K1L2M3N4O5P6Q7R8S9T0U1V2W3X4Y5Z6
+Mixing text, numbers, and symbols together to test various scenarios.
+End of test file.
+LZW Compression Test. This file contains a variety of text patterns to evaluate compression.
+Repeating text patterns should be efficiently compressed. Example:
+ABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABA
+123123123123123123123123123123123123123123123123123123123123123123123123123123123123
+Unique sentences like: "This is a unique test sentence to check the efficiency of LZW."
+More unique content: The quick brown fox jumps over the lazy dog. Lorem ipsum dolor sit amet.
+Binary-like content: 010101010101010101010101010101010101010101010101010101010101
+Random characters: !@#$%^&*()_+{}|:"<>?`~-=[]\;',./
+Numbers and letters: A1B2C3D4E5F6G7H8I9J0K1L2M3N4O5P6Q7R8S9T0U1V2W3X4Y5Z6
+Mixing text, numbers, and symbols together to test various scenarios.
+End of test file.
+LZW Compression Test. This file contains a variety of text patterns to evaluate compression.
+Repeating text patterns should be efficiently compressed. Example:
+ABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABA
+123123123123123123123123123123123123123123123123123123123123123123123123123123123123
+Unique sentences like: "This is a unique test sentence to check the efficiency of LZW."
+More unique content: The quick brown fox jumps over the lazy dog. Lorem ipsum dolor sit amet.
+Binary-like content: 010101010101010101010101010101010101010101010101010101010101
+Random characters: !@#$%^&*()_+{}|:"<>?`~-=[]\;',./
+Numbers and letters: A1B2C3D4E5F6G7H8I9J0K1L2M3N4O5P6Q7R8S9T0U1V2W3X4Y5Z6
+Mixing text, numbers, and symbols together to test various scenarios.
+End of test file.
+LZW Compression Test. This file contains a variety of text patterns to evaluate compression.
+Repeating text patterns should be efficiently compressed. Example:
+ABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABA
+123123123123123123123123123123123123123123123123123123123123123123123123123123123123
+Unique sentences like: "This is a unique test sentence to check the efficiency of LZW."
+More unique content: The quick brown fox jumps over the lazy dog. Lorem ipsum dolor sit amet.
+Binary-like content: 010101010101010101010101010101010101010101010101010101010101
+Random characters: !@#$%^&*()_+{}|:"<>?`~-=[]\;',./
+Numbers and letters: A1B2C3D4E5F6G7H8I9J0K1L2M3N4O5P6Q7R8S9T0U1V2W3X4Y5Z6
+Mixing text, numbers, and symbols together to test various scenarios.
+End of test file.
+LZW Compression Test. This file contains a variety of text patterns to evaluate compression.
+Repeating text patterns should be efficiently compressed. Example:
+ABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABA
+123123123123123123123123123123123123123123123123123123123123123123123123123123123123
+Unique sentences like: "This is a unique test sentence to check the efficiency of LZW."
+More unique content: The quick brown fox jumps over the lazy dog. Lorem ipsum dolor sit amet.
+Binary-like content: 010101010101010101010101010101010101010101010101010101010101
+Random characters: !@#$%^&*()_+{}|:"<>?`~-=[]\;',./
+Numbers and letters: A1B2C3D4E5F6G7H8I9J0K1L2M3N4O5P6Q7R8S9T0U1V2W3X4Y5Z6
+Mixing text, numbers, and symbols together to test various scenarios.
+End of test file.
+LZW Compression Test. This file contains a variety of text patterns to evaluate compression.
+Repeating text patterns should be efficiently compressed. Example:
+ABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABA
+123123123123123123123123123123123123123123123123123123123123123123123123123123123123
+Unique sentences like: "This is a unique test sentence to check the efficiency of LZW."
+More unique content: The quick brown fox jumps over the lazy dog. Lorem ipsum dolor sit amet.
+Binary-like content: 010101010101010101010101010101010101010101010101010101010101
+Random characters: !@#$%^&*()_+{}|:"<>?`~-=[]\;',./
+Numbers and letters: A1B2C3D4E5F6G7H8I9J0K1L2M3N4O5P6Q7R8S9T0U1V2W3X4Y5Z6
+Mixing text, numbers, and symbols together to test various scenarios.
+End of test file.
+LZW Compression Test. This file contains a variety of text patterns to evaluate compression.
+Repeating text patterns should be efficiently compressed. Example:
+ABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABA
+123123123123123123123123123123123123123123123123123123123123123123123123123123123123
+Unique sentences like: "This is a unique test sentence to check the efficiency of LZW."
+More unique content: The quick brown fox jumps over the lazy dog. Lorem ipsum dolor sit amet.
+Binary-like content: 010101010101010101010101010101010101010101010101010101010101
+Random characters: !@#$%^&*()_+{}|:"<>?`~-=[]\;',./
+Numbers and letters: A1B2C3D4E5F6G7H8I9J0K1L2M3N4O5P6Q7R8S9T0U1V2W3X4Y5Z6
+Mixing text, numbers, and symbols together to test various scenarios.
+End of test file.
+LZW Compression Test. This file contains a variety of text patterns to evaluate compression.
+Repeating text patterns should be efficiently compressed. Example:
+ABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABA
+123123123123123123123123123123123123123123123123123123123123123123123123123123123123
+Unique sentences like: "This is a unique test sentence to check the efficiency of LZW."
+More unique content: The quick brown fox jumps over the lazy dog. Lorem ipsum dolor sit amet.
+Binary-like content: 010101010101010101010101010101010101010101010101010101010101
+Random characters: !@#$%^&*()_+{}|:"<>?`~-=[]\;',./
+Numbers and letters: A1B2C3D4E5F6G7H8I9J0K1L2M3N4O5P6Q7R8S9T0U1V2W3X4Y5Z6
+Mixing text, numbers, and symbols together to test various scenarios.
+End of test file.
+LZW Compression Test. This file contains a variety of text patterns to evaluate compression.
+Repeating text patterns should be efficiently compressed. Example:
+ABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABA
+123123123123123123123123123123123123123123123123123123123123123123123123123123123123
+Unique sentences like: "This is a unique test sentence to check the efficiency of LZW."
+More unique content: The quick brown fox jumps over the lazy dog. Lorem ipsum dolor sit amet.
+Binary-like content: 010101010101010101010101010101010101010101010101010101010101
+Random characters: !@#$%^&*()_+{}|:"<>?`~-=[]\;',./
+Numbers and letters: A1B2C3D4E5F6G7H8I9J0K1L2M3N4O5P6Q7R8S9T0U1V2W3X4Y5Z6
+Mixing text, numbers, and symbols together to test various scenarios.
+End of test file.
+LZW Compression Test. This file contains a variety of text patterns to evaluate compression.
+Repeating text patterns should be efficiently compressed. Example:
+ABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABA
+123123123123123123123123123123123123123123123123123123123123123123123123123123123123
+Unique sentences like: "This is a unique test sentence to check the efficiency of LZW."
+More unique content: The quick brown fox jumps over the lazy dog. Lorem ipsum dolor sit amet.
+Binary-like content: 010101010101010101010101010101010101010101010101010101010101
+Random characters: !@#$%^&*()_+{}|:"<>?`~-=[]\;',./
+Numbers and letters: A1B2C3D4E5F6G7H8I9J0K1L2M3N4O5P6Q7R8S9T0U1V2W3X4Y5Z6
+Mixing text, numbers, and symbols together to test various scenarios.
+End of test file.
+LZW Compression Test. This file contains a variety of text patterns to evaluate compression.
+Repeating text patterns should be efficiently compressed. Example:
+ABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABA
+123123123123123123123123123123123123123123123123123123123123123123123123123123123123
+Unique sentences like: "This is a unique test sentence to check the efficiency of LZW."
+More unique content: The quick brown fox jumps over the lazy dog. Lorem ipsum dolor sit amet.
+Binary-like content: 010101010101010101010101010101010101010101010101010101010101
+Random characters: !@#$%^&*()_+{}|:"<>?`~-=[]\;',./
+Numbers and letters: A1B2C3D4E5F6G7H8I9J0K1L2M3N4O5P6Q7R8S9T0U1V2W3X4Y5Z6
+Mixing text, numbers, and symbols together to test various scenarios.
+End of test file.
+LZW Compression Test. This file contains a variety of text patterns to evaluate compression.
+Repeating text patterns should be efficiently compressed. Example:
+ABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABA
+123123123123123123123123123123123123123123123123123123123123123123123123123123123123
+Unique sentences like: "This is a unique test sentence to check the efficiency of LZW."
+More unique content: The quick brown fox jumps over the lazy dog. Lorem ipsum dolor sit amet.
+Binary-like content: 010101010101010101010101010101010101010101010101010101010101
+Random characters: !@#$%^&*()_+{}|:"<>?`~-=[]\;',./
+Numbers and letters: A1B2C3D4E5F6G7H8I9J0K1L2M3N4O5P6Q7R8S9T0U1V2W3X4Y5Z6
+Mixing text, numbers, and symbols together to test various scenarios.
+End of test file.
+LZW Compression Test. This file contains a variety of text patterns to evaluate compression.
+Repeating text patterns should be efficiently compressed. Example:
+ABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABA
+123123123123123123123123123123123123123123123123123123123123123123123123123123123123
+Unique sentences like: "This is a unique test sentence to check the efficiency of LZW."
+More unique content: The quick brown fox jumps over the lazy dog. Lorem ipsum dolor sit amet.
+Binary-like content: 010101010101010101010101010101010101010101010101010101010101
+Random characters: !@#$%^&*()_+{}|:"<>?`~-=[]\;',./
+Numbers and letters: A1B2C3D4E5F6G7H8I9J0K1L2M3N4O5P6Q7R8S9T0U1V2W3X4Y5Z6
+Mixing text, numbers, and symbols together to test various scenarios.
+End of test file.
+LZW Compression Test. This file contains a variety of text patterns to evaluate compression.
+Repeating text patterns should be efficiently compressed. Example:
+ABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABA
+123123123123123123123123123123123123123123123123123123123123123123123123123123123123
+Unique sentences like: "This is a unique test sentence to check the efficiency of LZW."
+More unique content: The quick brown fox jumps over the lazy dog. Lorem ipsum dolor sit amet.
+Binary-like content: 010101010101010101010101010101010101010101010101010101010101
+Random characters: !@#$%^&*()_+{}|:"<>?`~-=[]\;',./
+Numbers and letters: A1B2C3D4E5F6G7H8I9J0K1L2M3N4O5P6Q7R8S9T0U1V2W3X4Y5Z6
+Mixing text, numbers, and symbols together to test various scenarios.
+End of test file.
+LZW Compression Test. This file contains a variety of text patterns to evaluate compression.
+Repeating text patterns should be efficiently compressed. Example:
+ABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABA
+123123123123123123123123123123123123123123123123123123123123123123123123123123123123
+Unique sentences like: "This is a unique test sentence to check the efficiency of LZW."
+More unique content: The quick brown fox jumps over the lazy dog. Lorem ipsum dolor sit amet.
+Binary-like content: 010101010101010101010101010101010101010101010101010101010101
+Random characters: !@#$%^&*()_+{}|:"<>?`~-=[]\;',./
+Numbers and letters: A1B2C3D4E5F6G7H8I9J0K1L2M3N4O5P6Q7R8S9T0U1V2W3X4Y5Z6
+Mixing text, numbers, and symbols together to test various scenarios.
+End of test file.
+LZW Compression Test. This file contains a variety of text patterns to evaluate compression.
+Repeating text patterns should be efficiently compressed. Example:
+ABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABA
+123123123123123123123123123123123123123123123123123123123123123123123123123123123123
+Unique sentences like: "This is a unique test sentence to check the efficiency of LZW."
+More unique content: The quick brown fox jumps over the lazy dog. Lorem ipsum dolor sit amet.
+Binary-like content: 010101010101010101010101010101010101010101010101010101010101
+Random characters: !@#$%^&*()_+{}|:"<>?`~-=[]\;',./
+Numbers and letters: A1B2C3D4E5F6G7H8I9J0K1L2M3N4O5P6Q7R8S9T0U1V2W3X4Y5Z6
+Mixing text, numbers, and symbols together to test various scenarios.
+End of test file.
+LZW Compression Test. This file contains a variety of text patterns to evaluate compression.
+Repeating text patterns should be efficiently compressed. Example:
+ABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABA
+123123123123123123123123123123123123123123123123123123123123123123123123123123123123
+Unique sentences like: "This is a unique test sentence to check the efficiency of LZW."
+More unique content: The quick brown fox jumps over the lazy dog. Lorem ipsum dolor sit amet.
+Binary-like content: 010101010101010101010101010101010101010101010101010101010101
+Random characters: !@#$%^&*()_+{}|:"<>?`~-=[]\;',./
+Numbers and letters: A1B2C3D4E5F6G7H8I9J0K1L2M3N4O5P6Q7R8S9T0U1V2W3X4Y5Z6
+Mixing text, numbers, and symbols together to test various scenarios.
+End of test file.
+LZW Compression Test. This file contains a variety of text patterns to evaluate compression.
+Repeating text patterns should be efficiently compressed. Example:
+ABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABA
+123123123123123123123123123123123123123123123123123123123123123123123123123123123123
+Unique sentences like: "This is a unique test sentence to check the efficiency of LZW."
+More unique content: The quick brown fox jumps over the lazy dog. Lorem ipsum dolor sit amet.
+Binary-like content: 010101010101010101010101010101010101010101010101010101010101
+Random characters: !@#$%^&*()_+{}|:"<>?`~-=[]\;',./
+Numbers and letters: A1B2C3D4E5F6G7H8I9J0K1L2M3N4O5P6Q7R8S9T0U1V2W3X4Y5Z6
+Mixing text, numbers, and symbols together to test various scenarios.
+End of test file.
+LZW Compression Test. This file contains a variety of text patterns to evaluate compression.
+Repeating text patterns should be efficiently compressed. Example:
+ABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABA
+123123123123123123123123123123123123123123123123123123123123123123123123123123123123
+Unique sentences like: "This is a unique test sentence to check the efficiency of LZW."
+More unique content: The quick brown fox jumps over the lazy dog. Lorem ipsum dolor sit amet.
+Binary-like content: 010101010101010101010101010101010101010101010101010101010101
+Random characters: !@#$%^&*()_+{}|:"<>?`~-=[]\;',./
+Numbers and letters: A1B2C3D4E5F6G7H8I9J0K1L2M3N4O5P6Q7R8S9T0U1V2W3X4Y5Z6
+Mixing text, numbers, and symbols together to test various scenarios.
+End of test file.
+LZW Compression Test. This file contains a variety of text patterns to evaluate compression.
+Repeating text patterns should be efficiently compressed. Example:
+ABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABA
+123123123123123123123123123123123123123123123123123123123123123123123123123123123123
+Unique sentences like: "This is a unique test sentence to check the efficiency of LZW."
+More unique content: The quick brown fox jumps over the lazy dog. Lorem ipsum dolor sit amet.
+Binary-like content: 010101010101010101010101010101010101010101010101010101010101
+Random characters: !@#$%^&*()_+{}|:"<>?`~-=[]\;',./
+Numbers and letters: A1B2C3D4E5F6G7H8I9J0K1L2M3N4O5P6Q7R8S9T0U1V2W3X4Y5Z6
+Mixing text, numbers, and symbols together to test various scenarios.
+End of test file.
+LZW Compression Test. This file contains a variety of text patterns to evaluate compression.
+Repeating text patterns should be efficiently compressed. Example:
+ABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABA
+123123123123123123123123123123123123123123123123123123123123123123123123123123123123
+Unique sentences like: "This is a unique test sentence to check the efficiency of LZW."
+More unique content: The quick brown fox jumps over the lazy dog. Lorem ipsum dolor sit amet.
+Binary-like content: 010101010101010101010101010101010101010101010101010101010101
+Random characters: !@#$%^&*()_+{}|:"<>?`~-=[]\;',./
+Numbers and letters: A1B2C3D4E5F6G7H8I9J0K1L2M3N4O5P6Q7R8S9T0U1V2W3X4Y5Z6
+Mixing text, numbers, and symbols together to test various scenarios.
+End of test file.
+LZW Compression Test. This file contains a variety of text patterns to evaluate compression.
+Repeating text patterns should be efficiently compressed. Example:
+ABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABA
+123123123123123123123123123123123123123123123123123123123123123123123123123123123123
+Unique sentences like: "This is a unique test sentence to check the efficiency of LZW."
+More unique content: The quick brown fox jumps over the lazy dog. Lorem ipsum dolor sit amet.
+Binary-like content: 010101010101010101010101010101010101010101010101010101010101
+Random characters: !@#$%^&*()_+{}|:"<>?`~-=[]\;',./
+Numbers and letters: A1B2C3D4E5F6G7H8I9J0K1L2M3N4O5P6Q7R8S9T0U1V2W3X4Y5Z6
+Mixing text, numbers, and symbols together to test various scenarios.
+End of test file.
+LZW Compression Test. This file contains a variety of text patterns to evaluate compression.
+Repeating text patterns should be efficiently compressed. Example:
+ABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABA
+123123123123123123123123123123123123123123123123123123123123123123123123123123123123
+Unique sentences like: "This is a unique test sentence to check the efficiency of LZW."
+More unique content: The quick brown fox jumps over the lazy dog. Lorem ipsum dolor sit amet.
+Binary-like content: 010101010101010101010101010101010101010101010101010101010101
+Random characters: !@#$%^&*()_+{}|:"<>?`~-=[]\;',./
+Numbers and letters: A1B2C3D4E5F6G7H8I9J0K1L2M3N4O5P6Q7R8S9T0U1V2W3X4Y5Z6
+Mixing text, numbers, and symbols together to test various scenarios.
+End of test file.
+LZW Compression Test. This file contains a variety of text patterns to evaluate compression.
+Repeating text patterns should be efficiently compressed. Example:
+ABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABA
+123123123123123123123123123123123123123123123123123123123123123123123123123123123123
+Unique sentences like: "This is a unique test sentence to check the efficiency of LZW."
+More unique content: The quick brown fox jumps over the lazy dog. Lorem ipsum dolor sit amet.
+Binary-like content: 010101010101010101010101010101010101010101010101010101010101
+Random characters: !@#$%^&*()_+{}|:"<>?`~-=[]\;',./
+Numbers and letters: A1B2C3D4E5F6G7H8I9J0K1L2M3N4O5P6Q7R8S9T0U1V2W3X4Y5Z6
+Mixing text, numbers, and symbols together to test various scenarios.
+End of test file.
+LZW Compression Test. This file contains a variety of text patterns to evaluate compression.
+Repeating text patterns should be efficiently compressed. Example:
+ABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABA
+123123123123123123123123123123123123123123123123123123123123123123123123123123123123
+Unique sentences like: "This is a unique test sentence to check the efficiency of LZW."
+More unique content: The quick brown fox jumps over the lazy dog. Lorem ipsum dolor sit amet.
+Binary-like content: 010101010101010101010101010101010101010101010101010101010101
+Random characters: !@#$%^&*()_+{}|:"<>?`~-=[]\;',./
+Numbers and letters: A1B2C3D4E5F6G7H8I9J0K1L2M3N4O5P6Q7R8S9T0U1V2W3X4Y5Z6
+Mixing text, numbers, and symbols together to test various scenarios.
+End of test file.
+LZW Compression Test. This file contains a variety of text patterns to evaluate compression.
+Repeating text patterns should be efficiently compressed. Example:
+ABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABA
+123123123123123123123123123123123123123123123123123123123123123123123123123123123123
+Unique sentences like: "This is a unique test sentence to check the efficiency of LZW."
+More unique content: The quick brown fox jumps over the lazy dog. Lorem ipsum dolor sit amet.
+Binary-like content: 010101010101010101010101010101010101010101010101010101010101
+Random characters: !@#$%^&*()_+{}|:"<>?`~-=[]\;',./
+Numbers and letters: A1B2C3D4E5F6G7H8I9J0K1L2M3N4O5P6Q7R8S9T0U1V2W3X4Y5Z6
+Mixing text, numbers, and symbols together to test various scenarios.
+End of test file.
+LZW Compression Test. This file contains a variety of text patterns to evaluate compression.
+Repeating text patterns should be efficiently compressed. Example:
+ABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABA
+123123123123123123123123123123123123123123123123123123123123123123123123123123123123
+Unique sentences like: "This is a unique test sentence to check the efficiency of LZW."
+More unique content: The quick brown fox jumps over the lazy dog. Lorem ipsum dolor sit amet.
+Binary-like content: 010101010101010101010101010101010101010101010101010101010101
+Random characters: !@#$%^&*()_+{}|:"<>?`~-=[]\;',./
+Numbers and letters: A1B2C3D4E5F6G7H8I9J0K1L2M3N4O5P6Q7R8S9T0U1V2W3X4Y5Z6
+Mixing text, numbers, and symbols together to test various scenarios.
+End of test file.
+LZW Compression Test. This file contains a variety of text patterns to evaluate compression.
+Repeating text patterns should be efficiently compressed. Example:
+ABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABA
+123123123123123123123123123123123123123123123123123123123123123123123123123123123123
+Unique sentences like: "This is a unique test sentence to check the efficiency of LZW."
+More unique content: The quick brown fox jumps over the lazy dog. Lorem ipsum dolor sit amet.
+Binary-like content: 010101010101010101010101010101010101010101010101010101010101
+Random characters: !@#$%^&*()_+{}|:"<>?`~-=[]\;',./
+Numbers and letters: A1B2C3D4E5F6G7H8I9J0K1L2M3N4O5P6Q7R8S9T0U1V2W3X4Y5Z6
+Mixing text, numbers, and symbols together to test various scenarios.
+End of test file.
+LZW Compression Test. This file contains a variety of text patterns to evaluate compression.
+Repeating text patterns should be efficiently compressed. Example:
+ABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABA
+123123123123123123123123123123123123123123123123123123123123123123123123123123123123
+Unique sentences like: "This is a unique test sentence to check the efficiency of LZW."
+More unique content: The quick brown fox jumps over the lazy dog. Lorem ipsum dolor sit amet.
+Binary-like content: 010101010101010101010101010101010101010101010101010101010101
+Random characters: !@#$%^&*()_+{}|:"<>?`~-=[]\;',./
+Numbers and letters: A1B2C3D4E5F6G7H8I9J0K1L2M3N4O5P6Q7R8S9T0U1V2W3X4Y5Z6
+Mixing text, numbers, and symbols together to test various scenarios.
+End of test file.
+LZW Compression Test. This file contains a variety of text patterns to evaluate compression.
+Repeating text patterns should be efficiently compressed. Example:
+ABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABA
+123123123123123123123123123123123123123123123123123123123123123123123123123123123123
+Unique sentences like: "This is a unique test sentence to check the efficiency of LZW."
+More unique content: The quick brown fox jumps over the lazy dog. Lorem ipsum dolor sit amet.
+Binary-like content: 010101010101010101010101010101010101010101010101010101010101
+Random characters: !@#$%^&*()_+{}|:"<>?`~-=[]\;',./
+Numbers and letters: A1B2C3D4E5F6G7H8I9J0K1L2M3N4O5P6Q7R8S9T0U1V2W3X4Y5Z6
+Mixing text, numbers, and symbols together to test various scenarios.
+End of test file.
+LZW Compression Test. This file contains a variety of text patterns to evaluate compression.
+Repeating text patterns should be efficiently compressed. Example:
+ABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABA
+123123123123123123123123123123123123123123123123123123123123123123123123123123123123
+Unique sentences like: "This is a unique test sentence to check the efficiency of LZW."
+More unique content: The quick brown fox jumps over the lazy dog. Lorem ipsum dolor sit amet.
+Binary-like content: 010101010101010101010101010101010101010101010101010101010101
+Random characters: !@#$%^&*()_+{}|:"<>?`~-=[]\;',./
+Numbers and letters: A1B2C3D4E5F6G7H8I9J0K1L2M3N4O5P6Q7R8S9T0U1V2W3X4Y5Z6
+Mixing text, numbers, and symbols together to test various scenarios.
+End of test file.
+LZW Compression Test. This file contains a variety of text patterns to evaluate compression.
+Repeating text patterns should be efficiently compressed. Example:
+ABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABA
+123123123123123123123123123123123123123123123123123123123123123123123123123123123123
+Unique sentences like: "This is a unique test sentence to check the efficiency of LZW."
+More unique content: The quick brown fox jumps over the lazy dog. Lorem ipsum dolor sit amet.
+Binary-like content: 010101010101010101010101010101010101010101010101010101010101
+Random characters: !@#$%^&*()_+{}|:"<>?`~-=[]\;',./
+Numbers and letters: A1B2C3D4E5F6G7H8I9J0K1L2M3N4O5P6Q7R8S9T0U1V2W3X4Y5Z6
+Mixing text, numbers, and symbols together to test various scenarios.
+End of test file.
+LZW Compression Test. This file contains a variety of text patterns to evaluate compression.
+Repeating text patterns should be efficiently compressed. Example:
+ABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABA
+123123123123123123123123123123123123123123123123123123123123123123123123123123123123
+Unique sentences like: "This is a unique test sentence to check the efficiency of LZW."
+More unique content: The quick brown fox jumps over the lazy dog. Lorem ipsum dolor sit amet.
+Binary-like content: 010101010101010101010101010101010101010101010101010101010101
+Random characters: !@#$%^&*()_+{}|:"<>?`~-=[]\;',./
+Numbers and letters: A1B2C3D4E5F6G7H8I9J0K1L2M3N4O5P6Q7R8S9T0U1V2W3X4Y5Z6
+Mixing text, numbers, and symbols together to test various scenarios.
+End of test file.
+LZW Compression Test. This file contains a variety of text patterns to evaluate compression.
+Repeating text patterns should be efficiently compressed. Example:
+ABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABA
+123123123123123123123123123123123123123123123123123123123123123123123123123123123123
+Unique sentences like: "This is a unique test sentence to check the efficiency of LZW."
+More unique content: The quick brown fox jumps over the lazy dog. Lorem ipsum dolor sit amet.
+Binary-like content: 010101010101010101010101010101010101010101010101010101010101
+Random characters: !@#$%^&*()_+{}|:"<>?`~-=[]\;',./
+Numbers and letters: A1B2C3D4E5F6G7H8I9J0K1L2M3N4O5P6Q7R8S9T0U1V2W3X4Y5Z6
+Mixing text, numbers, and symbols together to test various scenarios.
+End of test file.
+LZW Compression Test. This file contains a variety of text patterns to evaluate compression.
+Repeating text patterns should be efficiently compressed. Example:
+ABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABA
+123123123123123123123123123123123123123123123123123123123123123123123123123123123123
+Unique sentences like: "This is a unique test sentence to check the efficiency of LZW."
+More unique content: The quick brown fox jumps over the lazy dog. Lorem ipsum dolor sit amet.
+Binary-like content: 010101010101010101010101010101010101010101010101010101010101
+Random characters: !@#$%^&*()_+{}|:"<>?`~-=[]\;',./
+Numbers and letters: A1B2C3D4E5F6G7H8I9J0K1L2M3N4O5P6Q7R8S9T0U1V2W3X4Y5Z6
+Mixing text, numbers, and symbols together to test various scenarios.
+End of test file.
+LZW Compression Test. This file contains a variety of text patterns to evaluate compression.
+Repeating text patterns should be efficiently compressed. Example:
+ABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABA
+123123123123123123123123123123123123123123123123123123123123123123123123123123123123
+Unique sentences like: "This is a unique test sentence to check the efficiency of LZW."
+More unique content: The quick brown fox jumps over the lazy dog. Lorem ipsum dolor sit amet.
+Binary-like content: 010101010101010101010101010101010101010101010101010101010101
+Random characters: !@#$%^&*()_+{}|:"<>?`~-=[]\;',./
+Numbers and letters: A1B2C3D4E5F6G7H8I9J0K1L2M3N4O5P6Q7R8S9T0U1V2W3X4Y5Z6
+Mixing text, numbers, and symbols together to test various scenarios.
+End of test file.
+LZW Compression Test. This file contains a variety of text patterns to evaluate compression.
+Repeating text patterns should be efficiently compressed. Example:
+ABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABA
+123123123123123123123123123123123123123123123123123123123123123123123123123123123123
+Unique sentences like: "This is a unique test sentence to check the efficiency of LZW."
+More unique content: The quick brown fox jumps over the lazy dog. Lorem ipsum dolor sit amet.
+Binary-like content: 010101010101010101010101010101010101010101010101010101010101
+Random characters: !@#$%^&*()_+{}|:"<>?`~-=[]\;',./
+Numbers and letters: A1B2C3D4E5F6G7H8I9J0K1L2M3N4O5P6Q7R8S9T0U1V2W3X4Y5Z6
+Mixing text, numbers, and symbols together to test various scenarios.
+End of test file.
+LZW Compression Test. This file contains a variety of text patterns to evaluate compression.
+Repeating text patterns should be efficiently compressed. Example:
+ABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABA
+123123123123123123123123123123123123123123123123123123123123123123123123123123123123
+Unique sentences like: "This is a unique test sentence to check the efficiency of LZW."
+More unique content: The quick brown fox jumps over the lazy dog. Lorem ipsum dolor sit amet.
+Binary-like content: 010101010101010101010101010101010101010101010101010101010101
+Random characters: !@#$%^&*()_+{}|:"<>?`~-=[]\;',./
+Numbers and letters: A1B2C3D4E5F6G7H8I9J0K1L2M3N4O5P6Q7R8S9T0U1V2W3X4Y5Z6
+Mixing text, numbers, and symbols together to test various scenarios.
+End of test file.
+LZW Compression Test. This file contains a variety of text patterns to evaluate compression.
+Repeating text patterns should be efficiently compressed. Example:
+ABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABA
+123123123123123123123123123123123123123123123123123123123123123123123123123123123123
+Unique sentences like: "This is a unique test sentence to check the efficiency of LZW."
+More unique content: The quick brown fox jumps over the lazy dog. Lorem ipsum dolor sit amet.
+Binary-like content: 010101010101010101010101010101010101010101010101010101010101
+Random characters: !@#$%^&*()_+{}|:"<>?`~-=[]\;',./
+Numbers and letters: A1B2C3D4E5F6G7H8I9J0K1L2M3N4O5P6Q7R8S9T0U1V2W3X4Y5Z6
+Mixing text, numbers, and symbols together to test various scenarios.
+End of test file.
+LZW Compression Test. This file contains a variety of text patterns to evaluate compression.
+Repeating text patterns should be efficiently compressed. Example:
+ABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABA
+123123123123123123123123123123123123123123123123123123123123123123123123123123123123
+Unique sentences like: "This is a unique test sentence to check the efficiency of LZW."
+More unique content: The quick brown fox jumps over the lazy dog. Lorem ipsum dolor sit amet.
+Binary-like content: 010101010101010101010101010101010101010101010101010101010101
+Random characters: !@#$%^&*()_+{}|:"<>?`~-=[]\;',./
+Numbers and letters: A1B2C3D4E5F6G7H8I9J0K1L2M3N4O5P6Q7R8S9T0U1V2W3X4Y5Z6
+Mixing text, numbers, and symbols together to test various scenarios.
+End of test file.
+LZW Compression Test. This file contains a variety of text patterns to evaluate compression.
+Repeating text patterns should be efficiently compressed. Example:
+ABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABA
+123123123123123123123123123123123123123123123123123123123123123123123123123123123123
+Unique sentences like: "This is a unique test sentence to check the efficiency of LZW."
+More unique content: The quick brown fox jumps over the lazy dog. Lorem ipsum dolor sit amet.
+Binary-like content: 010101010101010101010101010101010101010101010101010101010101
+Random characters: !@#$%^&*()_+{}|:"<>?`~-=[]\;',./
+Numbers and letters: A1B2C3D4E5F6G7H8I9J0K1L2M3N4O5P6Q7R8S9T0U1V2W3X4Y5Z6
+Mixing text, numbers, and symbols together to test various scenarios.
+End of test file.
+LZW Compression Test. This file contains a variety of text patterns to evaluate compression.
+Repeating text patterns should be efficiently compressed. Example:
+ABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABA
+123123123123123123123123123123123123123123123123123123123123123123123123123123123123
+Unique sentences like: "This is a unique test sentence to check the efficiency of LZW."
+More unique content: The quick brown fox jumps over the lazy dog. Lorem ipsum dolor sit amet.
+Binary-like content: 010101010101010101010101010101010101010101010101010101010101
+Random characters: !@#$%^&*()_+{}|:"<>?`~-=[]\;',./
+Numbers and letters: A1B2C3D4E5F6G7H8I9J0K1L2M3N4O5P6Q7R8S9T0U1V2W3X4Y5Z6
+Mixing text, numbers, and symbols together to test various scenarios.
+End of test file.
+LZW Compression Test. This file contains a variety of text patterns to evaluate compression.
+Repeating text patterns should be efficiently compressed. Example:
+ABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABA
+123123123123123123123123123123123123123123123123123123123123123123123123123123123123
+Unique sentences like: "This is a unique test sentence to check the efficiency of LZW."
+More unique content: The quick brown fox jumps over the lazy dog. Lorem ipsum dolor sit amet.
+Binary-like content: 010101010101010101010101010101010101010101010101010101010101
+Random characters: !@#$%^&*()_+{}|:"<>?`~-=[]\;',./
+Numbers and letters: A1B2C3D4E5F6G7H8I9J0K1L2M3N4O5P6Q7R8S9T0U1V2W3X4Y5Z6
+Mixing text, numbers, and symbols together to test various scenarios.
+End of test file.
+LZW Compression Test. This file contains a variety of text patterns to evaluate compression.
+Repeating text patterns should be efficiently compressed. Example:
+ABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABA
+123123123123123123123123123123123123123123123123123123123123123123123123123123123123
+Unique sentences like: "This is a unique test sentence to check the efficiency of LZW."
+More unique content: The quick brown fox jumps over the lazy dog. Lorem ipsum dolor sit amet.
+Binary-like content: 010101010101010101010101010101010101010101010101010101010101
+Random characters: !@#$%^&*()_+{}|:"<>?`~-=[]\;',./
+Numbers and letters: A1B2C3D4E5F6G7H8I9J0K1L2M3N4O5P6Q7R8S9T0U1V2W3X4Y5Z6
+Mixing text, numbers, and symbols together to test various scenarios.
+End of test file.
+LZW Compression Test. This file contains a variety of text patterns to evaluate compression.
+Repeating text patterns should be efficiently compressed. Example:
+ABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABA
+123123123123123123123123123123123123123123123123123123123123123123123123123123123123
+Unique sentences like: "This is a unique test sentence to check the efficiency of LZW."
+More unique content: The quick brown fox jumps over the lazy dog. Lorem ipsum dolor sit amet.
+Binary-like content: 010101010101010101010101010101010101010101010101010101010101
+Random characters: !@#$%^&*()_+{}|:"<>?`~-=[]\;',./
+Numbers and letters: A1B2C3D4E5F6G7H8I9J0K1L2M3N4O5P6Q7R8S9T0U1V2W3X4Y5Z6
+Mixing text, numbers, and symbols together to test various scenarios.
+End of test file.
+LZW Compression Test. This file contains a variety of text patterns to evaluate compression.
+Repeating text patterns should be efficiently compressed. Example:
+ABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABA
+123123123123123123123123123123123123123123123123123123123123123123123123123123123123
+Unique sentences like: "This is a unique test sentence to check the efficiency of LZW."
+More unique content: The quick brown fox jumps over the lazy dog. Lorem ipsum dolor sit amet.
+Binary-like content: 010101010101010101010101010101010101010101010101010101010101
+Random characters: !@#$%^&*()_+{}|:"<>?`~-=[]\;',./
+Numbers and letters: A1B2C3D4E5F6G7H8I9J0K1L2M3N4O5P6Q7R8S9T0U1V2W3X4Y5Z6
+Mixing text, numbers, and symbols together to test various scenarios.
+End of test file.
+LZW Compression Test. This file contains a variety of text patterns to evaluate compression.
+Repeating text patterns should be efficiently compressed. Example:
+ABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABA
+123123123123123123123123123123123123123123123123123123123123123123123123123123123123
+Unique sentences like: "This is a unique test sentence to check the efficiency of LZW."
+More unique content: The quick brown fox jumps over the lazy dog. Lorem ipsum dolor sit amet.
+Binary-like content: 010101010101010101010101010101010101010101010101010101010101
+Random characters: !@#$%^&*()_+{}|:"<>?`~-=[]\;',./
+Numbers and letters: A1B2C3D4E5F6G7H8I9J0K1L2M3N4O5P6Q7R8S9T0U1V2W3X4Y5Z6
+Mixing text, numbers, and symbols together to test various scenarios.
+End of test file.

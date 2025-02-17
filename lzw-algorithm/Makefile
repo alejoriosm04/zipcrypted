@@ -6,20 +6,20 @@ INCLUDES = -I include
 
 # Archivos fuente
 SRC_COMPRESS    = src/lzw_compressor.cpp
-SRC_DECOMPRESS  = src/lzw_decompressor.cpp  # <--- Nuevo para descompresión
+SRC_DECOMPRESS  = src/lzw_decompressor.cpp
 SRC_MAIN        = src/main.cpp
 
 # Generamos objetos a partir de .cpp
 OBJ_COMPRESS    = $(SRC_COMPRESS:.cpp=.o)
-OBJ_DECOMPRESS  = $(SRC_DECOMPRESS:.cpp=.o)  # <--- Objeto del descompresor
+OBJ_DECOMPRESS  = $(SRC_DECOMPRESS:.cpp=.o)
 OBJ_MAIN        = $(SRC_MAIN:.cpp=.o)
 
 # Regla principal: "all" para compilar y obtener ejecutable
-all: lzw_compresor
+all: lzw_program
 
 # Ejecutable: incluye los objetos del compresor, descompresor y main
-lzw_compresor: $(OBJ_COMPRESS) $(OBJ_DECOMPRESS) $(OBJ_MAIN)
-	$(CXX) $(CXXFLAGS) -o lzw_compresor $(OBJ_COMPRESS) $(OBJ_DECOMPRESS) $(OBJ_MAIN)
+lzw_program: $(OBJ_COMPRESS) $(OBJ_DECOMPRESS) $(OBJ_MAIN)
+	$(CXX) $(CXXFLAGS) -o lzw_program $(OBJ_COMPRESS) $(OBJ_DECOMPRESS) $(OBJ_MAIN)
 
 # Regla genérica para compilar .cpp -> .o
 %.o: %.cpp
@@ -27,4 +27,4 @@ lzw_compresor: $(OBJ_COMPRESS) $(OBJ_DECOMPRESS) $(OBJ_MAIN)
 
 # Comando de limpieza
 clean:
-	rm -f src/*.o lzw_compresor
+	rm -f src/*.o lzw_program

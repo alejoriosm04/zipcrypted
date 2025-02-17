@@ -1,0 +1,15 @@
+LZW Compression Test - ASCII Only
+==================================
+This file contains a variety of characters, ensuring compression integrity.
+
+Numbers: 0123456789
+Lowercase: abcdefghijklmnopqrstuvwxyz
+Uppercase: ABCDEFGHIJKLMNOPQRSTUVWXYZ
+Punctuation: !@#$%^&*()-_=+[]{};:'",.<>/?\|
+Whitespace: [space][tab]	[newline]
+
+Repeating Patterns: LZWLZWLZWLZWLZWLZWLZWLZWLZWLZW
+Common Words: the and you that was with for had are but his they not
+Mixed Case Patterns: AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz
+
+End of test file. Ensure LZW handles this correctly.

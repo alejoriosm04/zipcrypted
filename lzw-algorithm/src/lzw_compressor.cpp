@@ -3,200 +3,164 @@
 #include <iostream>
 #include <unordered_map>
 #include <string>
-#include <fcntl.h>
-#include <unistd.h>
+#include <fcntl.h>       // open
+#include <unistd.h>     
 #include <sys/types.h>
 #include <sys/stat.h>
 
-static const int MAX_DICT_SIZE = 4096;
-static const size_t SAMPLE_SIZE = 1000; 
-static const int CLEAR_CODE = 256;
+// ---------------------------
+// Constantes y auxiliares
+// ---------------------------
+static const int MAX_DICT_SIZE = 4096;   // 12 bits -> 4096 entradas
+static const size_t SAMPLE_SIZE = 1000;    // para detección de binario
+static const int CLEAR_CODE = 256;         // Código de reinicio del diccionario
 
-static bool writeAll(int fd, const void* buffer, size_t count)
-{
+// Función para escribir todos los bytes solicitados (manejo de escrituras parciales)
+static bool writeAll(int fd, const void* buffer, size_t count) {
     const unsigned char* ptr = static_cast<const unsigned char*>(buffer);
-    size_t writtenSoFar = 0;
-    while (writtenSoFar < count) {
-        ssize_t w = write(fd, ptr + writtenSoFar, count - writtenSoFar);
-        if (w < 0) {
+    size_t written = 0;
+    while (written < count) {
+        ssize_t w = write(fd, ptr + written, count - written);
+        if (w <= 0) {
             std::cerr << "[writeAll] Error en write().\n";
             return false;
         }
-        if (w == 0) {
-            std::cerr << "[writeAll] No se pudo avanzar en la escritura.\n";
-            return false;
-        }
-        writtenSoFar += w;
+        written += w;
     }
     return true;
 }
 
-static bool isBinaryFile(int fd)
-{
-    unsigned char buffer[SAMPLE_SIZE];
-    ssize_t bytesRead = read(fd, buffer, SAMPLE_SIZE);
-    if (bytesRead <= 0) {
-        lseek(fd, 0, SEEK_SET);
-        return false;
-    }
-
-    int nonPrintableCount = 0;
-    for (int i = 0; i < bytesRead; ++i) {
-        unsigned char c = buffer[i];
-        if ((c < 32 || c > 126) && c != '\n' && c != '\r' && c != '\t') {
-            nonPrintableCount++;
-        }
-    }
-
+// Detecta si el archivo es mayormente binario (informativo)
+static bool isBinaryFile(int fd) {
+    unsigned char buf[SAMPLE_SIZE];
+    ssize_t n = read(fd, buf, SAMPLE_SIZE);
+    if(n <= 0) { lseek(fd, 0, SEEK_SET); return false; }
+    int nonPrintable = 0;
+    for(int i = 0; i < n; ++i)
+        if((buf[i] < 32 || buf[i] > 126) && buf[i] != '\n' && buf[i] != '\r' && buf[i] != '\t')
+            nonPrintable++;
     lseek(fd, 0, SEEK_SET);
-
-    double ratio = (double)nonPrintableCount / (double)bytesRead;
-    return (ratio > 0.30);
+    return (double(nonPrintable)/n > 0.30);
 }
 
-static unsigned int bitBuffer = 0;
-static int bitCount = 0;
+// ---------------------------
+// Empaquetado de 12 bits
+// ---------------------------
+static unsigned int bitBuffer = 0; // Buffer para acumular bits
+static int bitCount = 0;           // Número de bits almacenados en bitBuffer
 
-static bool flushOutputBits(int fd)
-{
-    while (bitCount >= 8) {
-        unsigned char outByte = bitBuffer & 0xFF;
-        if (!writeAll(fd, &outByte, 1)) {
-            return false;
-        }
+// Envía a disco mientras hayan 8 bits completos
+static bool flushOutputBits(int fd) {
+    while(bitCount >= 8) {
+        unsigned char byteOut = bitBuffer & 0xFF;
+        if (!writeAll(fd, &byteOut, 1)) return false;
         bitBuffer >>= 8;
         bitCount -= 8;
     }
     return true;
 }
 
-static bool writeCode12(int fd, int code)
-{
-    code &= 0xFFF;
+// Escribe un código de 12 bits en el flujo
+static bool writeCode12(int fd, int code) {
+    code &= 0xFFF; // Asegurar 12 bits
     bitBuffer |= (code << bitCount);
     bitCount += 12;
-    if (!flushOutputBits(fd)) {
-        return false;
-    }
-    return true;
+    return flushOutputBits(fd);
 }
 
-static bool flushRemainingBits(int fd)
-{
-    if (bitCount > 0) {
-        unsigned char outByte = bitBuffer & ((1 << bitCount) - 1);
-        if (!writeAll(fd, &outByte, 1)) {
-            return false;
-        }
+// Vacía los bits restantes (rellena a la izquierda para completar el byte)
+static bool flushRemainingBits(int fd) {
+    if(bitCount > 0) {
+        unsigned char outByte = (bitBuffer & ((1 << bitCount)-1)) << (8 - bitCount);
+        if (!writeAll(fd, &outByte, 1)) return false;
     }
     bitBuffer = 0;
-    bitCount  = 0;
+    bitCount = 0;
     return true;
 }
 
-static int resetDictionary(std::unordered_map<std::string,int> &dictionary)
-{
-    dictionary.clear();
-    dictionary.reserve(MAX_DICT_SIZE);
-
-    for (int i = 0; i < 256; ++i) {
-        std::string ch(1, static_cast<char>(i));
-        dictionary[ch] = i;
-    }
-    return 257;
+// ---------------------------
+// Resetear el diccionario
+// ---------------------------
+static int resetDictionary(std::unordered_map<std::string,int> &dict) {
+    dict.clear();
+    dict.reserve(MAX_DICT_SIZE);
+    for(int i = 0; i < 256; ++i)
+        dict[std::string(1, static_cast<char>(i))] = i;
+    return 257;  // Después de 0..255, reservamos CLEAR_CODE en 256
 }
 
-void compressLZW(const std::string &inputFile, const std::string &outputFile)
-{
+// ---------------------------
+// Compresión LZW principal
+// ---------------------------
+void compressLZW(const std::string &inputFile, const std::string &outputFile) {
     int fdIn = open(inputFile.c_str(), O_RDONLY);
-    if (fdIn < 0) {
-        std::cerr << "[compressLZW] Error: no se pudo abrir el archivo de entrada: "
-                  << inputFile << "\n";
+    if(fdIn < 0) {
+        std::cerr << "[compressLZW] Error al abrir entrada: " << inputFile << "\n";
         return;
     }
-
     int fdOut = open(outputFile.c_str(), O_WRONLY | O_CREAT | O_TRUNC, 0644);
-    if (fdOut < 0) {
-        std::cerr << "[compressLZW] Error: no se pudo crear/abrir el archivo de salida: "
-                  << outputFile << "\n";
+    if(fdOut < 0) {
+        std::cerr << "[compressLZW] Error al abrir salida: " << outputFile << "\n";
         close(fdIn);
         return;
     }
 
-    bool isBin = isBinaryFile(fdIn);
-    if (isBin) {
+    // Informe sobre tipo de archivo
+    if(isBinaryFile(fdIn))
         std::cout << "[Info] Archivo detectado como BINARIO.\n";
-    } else {
+    else
         std::cout << "[Info] Archivo detectado como TEXTO (o mayormente texto).\n";
-    }
 
-    std::unordered_map<std::string, int> dictionary;
-    int nextCode = resetDictionary(dictionary);
+    std::unordered_map<std::string,int> dict;
+    int nextCode = resetDictionary(dict);
 
     unsigned char buffer;
-    ssize_t bytesRead = read(fdIn, &buffer, 1);
-    if (bytesRead < 0) {
-        std::cerr << "[compressLZW] Error de lectura en el archivo: " << inputFile << "\n";
-        close(fdIn);
-        close(fdOut);
+    ssize_t n = read(fdIn, &buffer, 1);
+    if(n <= 0) {
+        std::cerr << "[compressLZW] Archivo vacío o error de lectura.\n";
+        close(fdIn); close(fdOut);
         return;
     }
-    if (bytesRead == 0) {
-        std::cerr << "[compressLZW] El archivo está vacío, no se genera salida.\n";
-        close(fdIn);
-        close(fdOut);
-        return;
-    }
-
     std::string W(1, static_cast<char>(buffer));
 
-    while (true) {
-        bytesRead = read(fdIn, &buffer, 1);
-        if (bytesRead < 0) {
+    while(true) {
+        n = read(fdIn, &buffer, 1);
+        if(n < 0) {
             std::cerr << "[compressLZW] Error de lectura.\n";
-            close(fdIn);
-            close(fdOut);
-            return;
-        }
-        if (bytesRead == 0) {
-            int code = dictionary[W];
-            if (!writeCode12(fdOut, code)) {
-                std::cerr << "[compressLZW] Error escribiendo el código final.\n";
-            }
             break;
         }
-
+        if(n == 0) { // Fin de archivo
+            int code = dict[W];
+            if(!writeCode12(fdOut, code))
+                std::cerr << "[compressLZW] Error escribiendo código final.\n";
+            break;
+        }
         std::string WK = W + static_cast<char>(buffer);
-
-        auto it = dictionary.find(WK);
-        if (it != dictionary.end()) {
+        if(dict.find(WK) != dict.end()) {
             W = WK;
         } else {
-            int code = dictionary[W];
-            if (!writeCode12(fdOut, code)) {
+            int code = dict[W];
+            if(!writeCode12(fdOut, code)) {
                 std::cerr << "[compressLZW] Error escribiendo código.\n";
+                break;
             }
-
-            if (nextCode < MAX_DICT_SIZE) {
-                dictionary[WK] = nextCode++;
-            } else {
-                if (!writeCode12(fdOut, CLEAR_CODE)) {
-                std::cerr << "[compressLZW] Error escribiendo CLEAR_CODE.\n";
-                }
-                nextCode = resetDictionary(dictionary);
+            // Agregar WK al diccionario o emitir CLEAR_CODE si está lleno
+            if(nextCode < MAX_DICT_SIZE)
+                dict[WK] = nextCode++;
+            else {
+                if(!writeCode12(fdOut, CLEAR_CODE))
+                    std::cerr << "[compressLZW] Error escribiendo CLEAR_CODE.\n";
+                nextCode = resetDictionary(dict);
             }
-
             W = std::string(1, static_cast<char>(buffer));
         }
     }
 
-    if (!flushRemainingBits(fdOut)) {
-        std::cerr << "[compressLZW] Error al volcar bits restantes.\n";
-    }
+    if(!flushRemainingBits(fdOut))
+        std::cerr << "[compressLZW] Error al vaciar bits restantes.\n";
 
     close(fdIn);
     close(fdOut);
-
-    std::cout << "[compressLZW] Archivo comprimido (12 bits) exitosamente: " 
-              << outputFile << "\n";
+    std::cout << "[compressLZW] Compresión exitosa: " << outputFile << "\n";
 }
