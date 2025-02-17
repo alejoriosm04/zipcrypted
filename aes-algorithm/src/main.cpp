@@ -9,6 +9,7 @@ void printHelp(const std::string &progName) {
     std::cout << "  -v, --version          Muestra la versión del programa.\n";
     std::cout << "  -e, --encrypt          Encripta el archivo indicado.\n";
     std::cout << "  -d, --decrypt          Desencripta el archivo indicado.\n";
+    std::cout << "\nNota: La clave debe tener exactamente 16 bytes de longitud.\n";
 }
 
 void printVersion() {
