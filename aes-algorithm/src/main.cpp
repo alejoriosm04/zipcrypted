@@ -3,7 +3,7 @@
 #include "ManejadorArchivo.h"
 
 void printHelp(const std::string &progName) {
-    std::cout << "Uso: " << progName << " [opciones] <archivo_entrada> [clave] [archivo_salida]\n";
+    std::cout << "Uso: " << progName << " [opciones] <archivo_entrada> [archivo_salida] [clave]\n";
     std::cout << "Opciones:\n";
     std::cout << "  -h, --help             Muestra este mensaje de ayuda.\n";
     std::cout << "  -v, --version          Muestra la versión del programa.\n";
@@ -44,10 +44,10 @@ int main(int argc, char* argv[]) {
     }
     
     std::string archivoEntrada = argv[2];
-    // Clave por defecto es "aesEncryptionKey"
-    std::string clave = (argc >= 4) ? argv[3] : "aesEncryptionKey";
     // Archivo de salida por defecto:
-    std::string archivoSalida = (argc >= 5) ? argv[4] : ((option == "-e" || option == "--encrypt") ? "encriptado_hex.txt" : "desencriptado.txt");
+    std::string archivoSalida = (argc >= 4) ? argv[3] : ((option == "-e" || option == "--encrypt") ? "encriptado_hex.txt" : "desencriptado.txt");
+    // Clave por defecto es "aesEncryptionKey"
+    std::string clave = (argc >= 5) ? argv[4] : "aesEncryptionKey";
     
     ManejadorArchivo manejador;
     if (!manejador.leerArchivo(archivoEntrada)) {
