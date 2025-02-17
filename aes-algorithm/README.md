@@ -1,10 +1,9 @@
-## AES (ECB) Encrypt
+## AES-128 (ECB)
 
-Este proyecto implementa la encriptación utilizando **AES-128 en modo ECB** con padding **PKCS#7**. La aplicación lee un archivo de entrada, encripta su contenido y muestra el resultado en formato hexadecimal tanto en la consola como en un archivo de salida.
+Este proyecto implementa la encriptación y desencriptación utilizando **AES-128 en modo ECB** con padding **PKCS#7**. La aplicación lee un archivo de entrada, encripta su contenido y muestra el resultado en formato hexadecimal tanto en la consola como en un archivo de salida. Así mismo, recibe un archivo encriptado en hexadecimal y lo desencripta.
 
-> **What is padding?: Padding**  
-> Padding is a technique used in block ciphers like AES to ensure that the input data's length is a multiple of the required block size. For instance, AES works with 16-byte blocks. If the data isn't an exact multiple of 16 bytes, extra bytes are added according to a defined scheme.  
-> In PKCS#7 padding, for example, if the data requires 6 extra bytes, each of these bytes will have the value 6 (0x06). This allows the decryption process to identify and remove the padding correctly, restoring the original data length.
+> **¿Qué es padding?**  
+> Padding es una técnica utilizada en los cifrados por bloques como AES para garantizar que la longitud de los datos de entrada sea un múltiplo del tamaño de bloque requerido. Por ejemplo, AES funciona con bloques de 16 bytes. Si los datos no son un múltiplo exacto de 16 bytes, se añaden bytes adicionales según un esquema definido. En  PKCS#7, por ejemplo, si los datos requieren 6 bytes extra, cada uno de estos bytes tendrá el valor 6 (0x06).
 
 ### Estructura del Proyecto
 
@@ -13,51 +12,28 @@ La organización del proyecto es la siguiente:
 ```
 aes_algorithm/
  ├── include
- │     ├── AES.h                # Declaraciones de las funciones de encriptación (KeyExpansion, AES_Encrypt, conversiones y padding PKCS#7)
- │     └── ManejadorArchivo.h   # Declaración de la clase que maneja la lectura de archivos y el proceso de encriptación, 
- │                                # incluyendo la escritura del resultado en un archivo en hexadecimal.
+ │     ├── aes_constants.h      # Declaraciones de las constantes del algoritmo AES-128
+ │     ├── aes_decryptor.h      # Declaraciones de las funciones inversas de desencriptación
+ │     ├── aes_encryptor.h      # Declaraciones de las funciones de encriptación
+ │     └── ManejadorArchivo.h   # Declaración de la clase que maneja la lectura de archivos
  ├── src
- │     ├── AES.cpp              # Implementación de las funciones de encriptación AES-128 (modo ECB)
- │     ├── ManejadorArchivo.cpp # Implementación de la clase para manejo de archivos y procesamiento de encriptación
- │     └── main.cpp             # Punto de entrada que gestiona los argumentos de línea de comandos y llama a la función de encriptación
+ │     ├── aes_decryptor.cpp    # Implementación de las funciones de desencriptación AES-128 (modo ECB)
+ │     ├── aes_encryptor.cpp    # Implementación de las funciones de encriptación AES-128 (modo ECB)
+ │     ├── ManejadorArchivo.cpp # Implementación de la clase para manejo de archivos y procesamiento
+ │     └── main.cpp             # Punto de entrada que gestiona los argumentos de línea de comandos
  └── Makefile                   # Script de compilación para generar el ejecutable 'aes'
 ```
 
-### Descripción de Archivos
+### ¿Por qué AES-128?
 
-- **include/aes_encryptor.h**  
-  Define el tipo de dato `aes_byte` y las constantes necesarias para AES-128, así como la interfaz de las funciones:
-  - `KeyExpansion`: Expande la clave de 16 bytes a 176 bytes.
-  - `AES_Encrypt`: Cifra un bloque de 16 bytes (representado como una matriz 4x4).
-  - `arrayToState` y `stateToArray`: Convierten entre un arreglo lineal de 16 bytes y la representación en matriz 4x4.
-  - `applyPKCS7Padding`: Aplica el padding PKCS#7 a un string para que su longitud sea múltiplo de 16.
+Coming soon!
 
-- **src/aes_encryptor.cpp**  
-  Contiene la implementación de las funciones de encriptación. Se utiliza la S-Box y Rcon para la expansión de la clave y la encriptación de cada bloque.
+### Procesamiento de archivos
 
-- **include/ManejadorArchivo.h**  
-  Declara la clase `ManejadorArchivo`, la cual se encarga de:
-  - Leer el archivo de entrada (en modo binario) y almacenar sus datos.
-  - Procesar la encriptación del contenido leído utilizando una clave.
-  - Convertir el resultado de la encriptación a una cadena hexadecimal.
-  - Escribir el resultado en un nuevo archivo.
+- Explicar si usamos texto o binario y porqué (justificación)
+- Cómo almacenamos los datos en memoria
+- Cómo recuparemos la información
 
-- **src/ManejadorArchivo.cpp**  
-  Implementa los métodos de `ManejadorArchivo`, en particular:
-  - `leerArchivo`: Lee el archivo y almacena su contenido en un vector.
-  - `encriptarArchivo`: Aplica padding, cifra cada bloque utilizando las funciones de AES y retorna el ciphertext en formato hexadecimal.
-  - `escribirEncriptacion`: Escribe la cadena hexadecimal resultante en un archivo de salida.
-
-- **src/main.cpp**  
-  Es el entry point de la aplicación. Se encarga de:
-  - Leer los argumentos de la línea de comandos.
-  - Validar el uso correcto del programa (por ejemplo, la opción `-e` o `--encrypt`).
-  - Invocar los métodos de `ManejadorArchivo` para leer el archivo de entrada, encriptarlo y guardar el resultado en un archivo nuevo.
-
-- **Makefile**  
-  Permite compilar todo el proyecto y generar el ejecutable llamado `aes`.  
-  - Para compilar: `make`
-  - Para limpiar la compilación: `make clean`
 
 ### Cómo Probar la Implementación
 
@@ -70,19 +46,48 @@ aes_algorithm/
 2. **Ejecutar la encriptación**  
    La aplicación se invoca desde la línea de comandos con la siguiente sintaxis:
    ```
-   ./aes_ -e <archivo_entrada> [clave] [archivo_salida]
+   ./aes_ [opciones] <archivo_entrada> [archivo_salida] [clave]
    ```
-   - `<archivo_entrada>`: Ruta del archivo que deseas encriptar.
-   - `[clave]`: (Opcional) La clave a utilizar para la encriptación. Si no se proporciona, se usa la clave por defecto `"aesEncryptionKey"`.
-   - `[archivo_salida]`: (Opcional) Nombre del archivo donde se almacenará el ciphertext en formato hexadecimal. Por defecto se guarda en `encriptado_hex.txt`.
+   - `<archivo_entrada>`: Ruta del archivo que deseas encriptar o desencriptar.
+   - `[archivo_salida]`: (Opcional) Nombre del archivo donde se almacenará el output respectivo. Por defecto se guarda en `encriptado_hex.txt` para encriptación y en`desencriptado.txt` para desencriptación.
+   - `[clave]`: (Opcional) La clave a utilizar para la encriptación, la cual **debe tener longitud de 16 bytes**. Si no se proporciona, se usa la clave por defecto `"aesEncryptionKey"`.
 
    **Ejemplo:**
    ```
-   ./aes -e archivo.txt aesEncryptionKey encriptado_hex.txt
+   ./aes -e archivo.txt encriptado_hex.txt aesEncryptionKey
+   ./aes -d encriptado_hex.txt desencriptado.txt aesEncryptionKey
    ```
 
 3. **Ver la salida**  
-   Creará (o sobrescribirá) el archivo de salida con la cadena hexadecimal resultante.
+   Creará (o sobrescribirá) el archivo de salida con la cadena resultante.
+
+### Configurar como un programa del sistema
+
+Si deseas ejecutar el programa desde cualquier ubicación en tu sistema, puedes instalarlo en un directorio del PATH. Para ello, sigue estos pasos:
+
+1. **Compilar el proyecto**  
+   Desde la raíz del directorio `aes_algorithm/`, ejecuta:
+   ```
+   make
+   ```
+
+2. **Instalar el programa**
+    ```
+    sudo make install
+    ```
+    Esto copiará el ejecutable `aes` al directorio `/usr/local/bin/`. De pronto es necesario reiniciar la terminal para que los cambios surtan efecto.
+
+3. **Ejecutar el programa**  
+   Ahora puedes invocar el programa desde cualquier ubicación en tu sistema:
+   ```
+   aes [opciones] <archivo_entrada> [archivo_salida] [clave]
+   ```
+
+   **Ejemplo:**
+   ```
+   aes -e archivo.txt encriptado_hex.txt aesEncryptionKey
+   aes -d encriptado_hex.txt desencriptado.txt aesEncryptionKey
+   ```
 
 ### Cómo puedo comprobar si funciona correctamente
 
@@ -90,6 +95,6 @@ aes_algorithm/
 
 2. En la configuraciones, selecciona el modo **ECB**, el padding **PKCS7** y la longitud de la clave **128 bits**.
 
-3. Introduce la clave `"aesEncryptionKey"` y el contenido del archivo de encriptación en `encriptado_hex.txt`.
+3. Introduce la clave `"aesEncryptionKey"` y el contenido de que desees encriptar o desencriptar.
 
-4. Haz clic en **Dencrypt** y deberías obtener el mismo mensaje que se encuentra en `archivo.txt`.
+4. Haz clic en **Encrypt/Dencrypt** y deberías obtener el mismo output que tuviste en nuestro programa.
