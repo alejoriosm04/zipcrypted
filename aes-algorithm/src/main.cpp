@@ -46,7 +46,7 @@ int main(int argc, char* argv[]) {
     
     std::string archivoEntrada = argv[2];
     // Archivo de salida por defecto:
-    std::string archivoSalida = (argc >= 4) ? argv[3] : ((option == "-e" || option == "--encrypt") ? "encriptado_hex.txt" : "desencriptado.txt");
+    std::string archivoSalida = (argc >= 4) ? argv[3] : ((option == "-e" || option == "--encrypt") ? "encriptado_hex.aex" : "desencriptado.txt");
     // Clave por defecto es "aesEncryptionKey"
     std::string clave = (argc >= 5) ? argv[4] : "aesEncryptionKey";
     

@@ -54,8 +54,8 @@ Coming soon!
 
    **Ejemplo:**
    ```
-   ./aes -e archivo.txt encriptado_hex.txt aesEncryptionKey
-   ./aes -d encriptado_hex.txt desencriptado.txt aesEncryptionKey
+   ./aes -e archivo.txt encriptado_hex.aex aesEncryptionKey
+   ./aes -d encriptado_hex.aex desencriptado.txt aesEncryptionKey
    ```
 
 3. **Ver la salida**  
@@ -85,8 +85,8 @@ Si deseas ejecutar el programa desde cualquier ubicación en tu sistema, puedes 
 
    **Ejemplo:**
    ```
-   aes -e archivo.txt encriptado_hex.txt aesEncryptionKey
-   aes -d encriptado_hex.txt desencriptado.txt aesEncryptionKey
+   aes -e archivo.txt encriptado_hex.aex aesEncryptionKey
+   aes -d encriptado_hex.aex desencriptado.txt aesEncryptionKey
    ```
 
 ### Cómo puedo comprobar si funciona correctamente
