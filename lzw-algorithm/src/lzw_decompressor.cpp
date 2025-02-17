@@ -3,14 +3,12 @@
 #include <iostream>
 #include <unordered_map>
 #include <string>
-#include <fcntl.h>       // open
-#include <unistd.h>      // read, write, close
+#include <fcntl.h>    
+#include <unistd.h>     
 #include <sys/types.h>
 #include <sys/stat.h>
 
-// ---------------------------
-// Constantes y auxiliares
-// ---------------------------
+
 static const int MAX_DICT_SIZE = 4096;
 static const int CLEAR_CODE = 256;
 static const int FIRST_CODE = 257;
@@ -29,9 +27,7 @@ static bool writeAll(int fd, const void* buffer, size_t count) {
     return true;
 }
 
-// ---------------------------
-// Módulo de lectura de 12 bits
-// ---------------------------
+
 static unsigned int bitBuffer = 0;
 static int bitCount = 0;
 
@@ -74,9 +70,7 @@ static int readCode12(int fd) {
     return code;
 }
 
-// ---------------------------
-// Resetear el diccionario
-// ---------------------------
+
 static void resetDictionary(std::unordered_map<int, std::string>& dict) {
     dict.clear();
     dict.reserve(MAX_DICT_SIZE);
@@ -84,9 +78,7 @@ static void resetDictionary(std::unordered_map<int, std::string>& dict) {
         dict[i] = std::string(1, static_cast<char>(i));
 }
 
-// ---------------------------
-// Descompresión LZW principal
-// ---------------------------
+
 void decompressLZW(const std::string &inputFile, const std::string &outputFile) {
     int fdIn = open(inputFile.c_str(), O_RDONLY);
     if(fdIn < 0) {
@@ -100,7 +92,6 @@ void decompressLZW(const std::string &inputFile, const std::string &outputFile) 
         return;
     }
 
-    // Reiniciar buffers globales de lectura
     bitBuffer = 0; bitCount = 0; readBufPos = 0; readBufEnd = 0;
 
     std::unordered_map<int, std::string> dict;
@@ -141,7 +132,6 @@ void decompressLZW(const std::string &inputFile, const std::string &outputFile) 
         if(dict.find(newCode) != dict.end()) {
             entry = dict[newCode];
         } else {
-            // Caso especial: newCode no existe aún en el diccionario
             entry = oldString + oldString[0];
         }
 
@@ -150,7 +140,6 @@ void decompressLZW(const std::string &inputFile, const std::string &outputFile) 
             break;
         }
 
-        // Agregar nueva entrada al diccionario
         if(nextCode < MAX_DICT_SIZE) {
             dict[nextCode++] = oldString + entry[0];
         }

@@ -3,19 +3,16 @@
 #include <iostream>
 #include <unordered_map>
 #include <string>
-#include <fcntl.h>       // open
+#include <fcntl.h>
 #include <unistd.h>     
 #include <sys/types.h>
 #include <sys/stat.h>
 
-// ---------------------------
-// Constantes y auxiliares
-// ---------------------------
-static const int MAX_DICT_SIZE = 4096;   // 12 bits -> 4096 entradas
-static const size_t SAMPLE_SIZE = 1000;    // para detección de binario
-static const int CLEAR_CODE = 256;         // Código de reinicio del diccionario
 
-// Función para escribir todos los bytes solicitados (manejo de escrituras parciales)
+static const int MAX_DICT_SIZE = 4096;   
+static const size_t SAMPLE_SIZE = 1000;    
+static const int CLEAR_CODE = 256;         
+
 static bool writeAll(int fd, const void* buffer, size_t count) {
     const unsigned char* ptr = static_cast<const unsigned char*>(buffer);
     size_t written = 0;
@@ -30,7 +27,6 @@ static bool writeAll(int fd, const void* buffer, size_t count) {
     return true;
 }
 
-// Detecta si el archivo es mayormente binario (informativo)
 static bool isBinaryFile(int fd) {
     unsigned char buf[SAMPLE_SIZE];
     ssize_t n = read(fd, buf, SAMPLE_SIZE);
@@ -43,13 +39,9 @@ static bool isBinaryFile(int fd) {
     return (double(nonPrintable)/n > 0.30);
 }
 
-// ---------------------------
-// Empaquetado de 12 bits
-// ---------------------------
-static unsigned int bitBuffer = 0; // Buffer para acumular bits
-static int bitCount = 0;           // Número de bits almacenados en bitBuffer
+static unsigned int bitBuffer = 0;
+static int bitCount = 0;          
 
-// Envía a disco mientras hayan 8 bits completos
 static bool flushOutputBits(int fd) {
     while(bitCount >= 8) {
         unsigned char byteOut = bitBuffer & 0xFF;
@@ -60,7 +52,7 @@ static bool flushOutputBits(int fd) {
     return true;
 }
 
-// Escribe un código de 12 bits en el flujo
+
 static bool writeCode12(int fd, int code) {
     code &= 0xFFF; // Asegurar 12 bits
     bitBuffer |= (code << bitCount);
@@ -68,7 +60,7 @@ static bool writeCode12(int fd, int code) {
     return flushOutputBits(fd);
 }
 
-// Vacía los bits restantes (rellena a la izquierda para completar el byte)
+
 static bool flushRemainingBits(int fd) {
     if(bitCount > 0) {
         unsigned char outByte = (bitBuffer & ((1 << bitCount)-1)) << (8 - bitCount);
@@ -79,20 +71,16 @@ static bool flushRemainingBits(int fd) {
     return true;
 }
 
-// ---------------------------
-// Resetear el diccionario
-// ---------------------------
+
 static int resetDictionary(std::unordered_map<std::string,int> &dict) {
     dict.clear();
     dict.reserve(MAX_DICT_SIZE);
     for(int i = 0; i < 256; ++i)
         dict[std::string(1, static_cast<char>(i))] = i;
-    return 257;  // Después de 0..255, reservamos CLEAR_CODE en 256
+    return 257;  
 }
 
-// ---------------------------
-// Compresión LZW principal
-// ---------------------------
+
 void compressLZW(const std::string &inputFile, const std::string &outputFile) {
     int fdIn = open(inputFile.c_str(), O_RDONLY);
     if(fdIn < 0) {
@@ -106,7 +94,7 @@ void compressLZW(const std::string &inputFile, const std::string &outputFile) {
         return;
     }
 
-    // Informe sobre tipo de archivo
+    
     if(isBinaryFile(fdIn))
         std::cout << "[Info] Archivo detectado como BINARIO.\n";
     else
@@ -130,7 +118,7 @@ void compressLZW(const std::string &inputFile, const std::string &outputFile) {
             std::cerr << "[compressLZW] Error de lectura.\n";
             break;
         }
-        if(n == 0) { // Fin de archivo
+        if(n == 0) { 
             int code = dict[W];
             if(!writeCode12(fdOut, code))
                 std::cerr << "[compressLZW] Error escribiendo código final.\n";
@@ -145,7 +133,7 @@ void compressLZW(const std::string &inputFile, const std::string &outputFile) {
                 std::cerr << "[compressLZW] Error escribiendo código.\n";
                 break;
             }
-            // Agregar WK al diccionario o emitir CLEAR_CODE si está lleno
+            
             if(nextCode < MAX_DICT_SIZE)
                 dict[WK] = nextCode++;
             else {
