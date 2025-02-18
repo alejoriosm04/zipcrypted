@@ -5,10 +5,11 @@
 #include <vector>
 #include <string>
 #include <cstdint>
+#include "aes_constants.h" 
 
 class ManejadorArchivo {
 private:
-    std::vector<uint8_t> datos;  // Contenido del archivo leído
+    std::vector<uint8_t> datos;  
 
 public:
     // Lee un archivo (modo binario) y almacena su contenido en 'datos'
@@ -27,4 +28,4 @@ public:
     bool escribirEncriptacion(const std::string &nombreArchivo, const std::string &contenidoHex);
 };
 
-#endif // MANEJADOR_ARCHIVO_H
+#endif 

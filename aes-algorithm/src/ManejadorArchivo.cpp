@@ -6,6 +6,9 @@
 #include <cstring>
 #include <cstdio>
 #include <algorithm>
+#include <fstream>
+#include <iomanip>
+#include <iostream>
 
 // Lee el archivo en modo binario y almacena su contenido en 'datos'
 bool ManejadorArchivo::leerArchivo(const std::string &nombreArchivo) {

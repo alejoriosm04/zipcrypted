@@ -1,7 +1,10 @@
 #include "aes_decryptor.h"
+#include "Util.h"  
 #include <cstring>
 #include <iostream>
 #include <sstream>
+#include <cstdio>
+#include <iomanip>
 
 // Tabla inversa de S-Box para la sustitución inversa de bytes
 const aes_byte InvSBox[256] = {
@@ -40,7 +43,6 @@ const aes_byte InvSBox[256] = {
 };
 
 
-// Convierte una cadena hexadecimal a un vector de bytes
 std::vector<aes_byte> hexStringToBytes(const std::string &hex) {
     std::vector<aes_byte> bytes;
     for (size_t i = 0; i < hex.length(); i += 2) {
@@ -50,7 +52,7 @@ std::vector<aes_byte> hexStringToBytes(const std::string &hex) {
     return bytes;
 }
 
-// Función auxiliar para extraer la subclave en cada ronda
+// extraer la subclave en cada ronda
 static void getRoundKey(const aes_byte expandedKey[AES_EXPANDED_KEY_SIZE], int round, aes_byte roundKey[4][4]) {
     int start = round * AES_BLOCK_SIZE;
     for (int i = 0; i < 16; i++) {
@@ -58,28 +60,28 @@ static void getRoundKey(const aes_byte expandedKey[AES_EXPANDED_KEY_SIZE], int r
     }
 }
 
-// Operación de sustitución inversa usando InvSBox
+// sustitución inversa usando InvSBox
 static void InvSubBytes(aes_byte state[4][4]) {
     for (int i = 0; i < 4; i++)
         for (int j = 0; j < 4; j++)
             state[i][j] = InvSBox[state[i][j]];
 }
 
-// Operación de desplazamiento inverso de filas
+// desplazamiento inverso de filas
 static void InvShiftRows(aes_byte state[4][4]) {
     aes_byte temp;
-    // Fila 1: right shift by 1
+    // shift by 1
     temp = state[1][3];
     state[1][3] = state[1][2];
     state[1][2] = state[1][1];
     state[1][1] = state[1][0];
     state[1][0] = temp;
 
-    // Fila 2: right shift by 2 (intercambio)
+    // shift by 2 
     std::swap(state[2][0], state[2][2]);
     std::swap(state[2][1], state[2][3]);
 
-    // Fila 3: right shift by 3
+    // shift by 3
     temp = state[3][0];
     state[3][0] = state[3][1];
     state[3][1] = state[3][2];
@@ -101,7 +103,7 @@ static aes_byte galoisMult(aes_byte a, aes_byte b) {
     return p;
 }
 
-// Operación de mezcla inversa de columnas en la matriz de estado
+// mezcla inversa de columnas en la matriz de estado
 static void InvMixColumns(aes_byte state[4][4]) {
     aes_byte temp[4];
     for (int c = 0; c < 4; c++) {
@@ -125,38 +127,42 @@ static void AddRoundKey(aes_byte state[4][4], aes_byte roundKey[4][4]) {
             state[i][j] ^= roundKey[i][j];
 }
 
-// Realiza la desencriptación AES-128 ECB
+
 void AES_Decrypt(aes_byte state[4][4], const aes_byte expandedKey[AES_EXPANDED_KEY_SIZE]) {
     aes_byte roundKey[4][4];
 
-    // Agregar la clave de la última ronda primero
+    // clave de la última ronda primero
     getRoundKey(expandedKey, AES_NR, roundKey);
     AddRoundKey(state, roundKey);
+    printMatrix("After AddRoundKey (last round)", state, "Before Inverse Rounds");
 
-    // Rondas inversas 9 a 1
     for (int round = AES_NR - 1; round > 0; round--) {
         InvShiftRows(state);
+        printMatrix("After InvShiftRows", state, "Round " + std::to_string(round));
         InvSubBytes(state);
+        printMatrix("After InvSubBytes", state, "Round " + std::to_string(round));
         getRoundKey(expandedKey, round, roundKey);
         AddRoundKey(state, roundKey);
+        printMatrix("After AddRoundKey", state, "Round " + std::to_string(round));
         InvMixColumns(state);
     }
 
-    // Ronda final sin MixColumns
     InvShiftRows(state);
+    printMatrix("After InvShiftRows (final)", state, "Final Round");
     InvSubBytes(state);
+    printMatrix("After InvSubBytes (final)", state, "Final Round");
     getRoundKey(expandedKey, 0, roundKey);
     AddRoundKey(state, roundKey);
+    printMatrix("After AddRoundKey (final)", state, "Final Round");
 }
 
-// Remueve el padding PKCS#7 después de la desencriptación
 std::vector<aes_byte> removePKCS7Padding(const std::vector<aes_byte> &input) {
     if (input.empty()) return {};
 
-    size_t padLen = input.back();  // Último byte indica el tamaño del padding
+    size_t padLen = input.back();  
     if (padLen > AES_BLOCK_SIZE || padLen == 0) {
         std::cerr << "Error: Padding incorrecto" << std::endl;
-        return input;  // Devuelve el texto sin cambios si el padding es inválido
+        return input;  
     }
 
     return std::vector<aes_byte>(input.begin(), input.end() - padLen);

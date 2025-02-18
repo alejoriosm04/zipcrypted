@@ -1,7 +1,10 @@
 #include "aes_encryptor.h"
+#include "Util.h"  
 #include <cstring>
 #include <cstdio>
 #include <algorithm>
+#include <iostream>
+#include <iomanip>
 
 // S-Box para sustitución de bytes
 const aes_byte SBox[256] = {
@@ -166,21 +169,29 @@ void AES_Encrypt(aes_byte state[4][4], const aes_byte expandedKey[AES_EXPANDED_K
     // Ronda inicial
     getRoundKey(expandedKey, 0, roundKey);
     AddRoundKey(state, roundKey);
+    printMatrix("After AddRoundKey (initial)", state, "Round 0");
     
     // Rondas 1 a 9
     for (int round = 1; round < AES_NR; round++) {
         SubBytes(state);
+        printMatrix("After SubBytes", state, "Round " + std::to_string(round));
         ShiftRows(state);
+        printMatrix("After ShiftRows", state, "Round " + std::to_string(round));
         MixColumns(state);
+        printMatrix("After MixColumns", state, "Round " + std::to_string(round));
         getRoundKey(expandedKey, round, roundKey);
         AddRoundKey(state, roundKey);
+        printMatrix("After AddRoundKey", state, "Round " + std::to_string(round));
     }
     
     // Ronda final (sin MixColumns)
     SubBytes(state);
+    printMatrix("After SubBytes (final)", state, "Final Round");
     ShiftRows(state);
+    printMatrix("After ShiftRows (final)", state, "Final Round");
     getRoundKey(expandedKey, AES_NR, roundKey);
     AddRoundKey(state, roundKey);
+    printMatrix("After AddRoundKey (final)", state, "Final Round");
 }
 
 // Aplica padding PKCS#7 a un string y retorna un vector de bytes
