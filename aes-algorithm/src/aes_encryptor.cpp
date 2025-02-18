@@ -166,7 +166,7 @@ static void getRoundKey(const aes_byte expandedKey[AES_EXPANDED_KEY_SIZE], int r
 // Función principal de encriptación AES-128 (modo ECB)
 void AES_Encrypt(aes_byte state[4][4], const aes_byte expandedKey[AES_EXPANDED_KEY_SIZE]) {
     aes_byte roundKey[4][4];
-    // Ronda inicial
+    // Ronda inicial 
     getRoundKey(expandedKey, 0, roundKey);
     AddRoundKey(state, roundKey);
     printMatrix("After AddRoundKey (initial)", state, "Round 0");
