@@ -26,13 +26,27 @@ aes_algorithm/
 
 ### ¿Por qué AES-128?
 
-Coming soon!
+- AES-128 fue seleccionado porque ofrece un equilibrio ideal entre seguridad robusta y eficiencia de rendimiento. 
+
+- Con una clave de 128 bits, proporciona protección adecuada frente a ataques conocidos, sin requerir altos recursos computacionales, lo que es fundamental en entornos de sistemas operativos. 
+
+- Además, su estructura bien documentada y estandarizada, que involucra solo 10 rondas, facilita su implementación desde cero sin depender de librerías externas, garantizando compatibilidad y una integración sencilla.
 
 ### Procesamiento de archivos
 
-- Explicar si usamos texto o binario y porqué (justificación)
-- Cómo almacenamos los datos en memoria
-- Cómo recuparemos la información
+Aquí tienes un ejemplo de redacción:
+
+---
+
+### Procesamiento de archivos
+
+- Nuestro programa es capaz de procesar tanto archivos de texto como binarios. Se opta por leer los archivos en modo binario para asegurar que cada byte se capture exactamente como está en el disco, sin ninguna conversión implícita de formato. Esto es crucial para los algoritmos de encriptación y desencriptación, ya que requieren trabajar con los datos "crudos" sin alteraciones, lo que permite procesar correctamente archivos de cualquier tipo. 
+
+- En memoria, los datos se almacenan en un vector de bytes (std::vector<uint8_t>), lo que facilita su manipulación y acceso de forma eficiente. 
+
+- Para recuperar la información, el programa procesa este vector: en el caso de la encriptación, se convierte en una cadena hexadecimal para su almacenamiento y transmisión; en la desencriptación, se eliminan los bytes de padding y se reconstruye el contenido original, ya sea en formato de texto o binario, según corresponda.
+
+---
 
 
 ### Cómo Probar la Implementación

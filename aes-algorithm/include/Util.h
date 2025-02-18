@@ -22,20 +22,4 @@ inline void printMatrix(const std::string &label, aes_byte state[4][4], const st
     }
     std::cout << "----------------------\n";
 }
-
-inline std::string getFileType(const std::string &filename) {
-    std::string command = "file " + filename;
-    FILE *pipe = popen(command.c_str(), "r");
-    if (!pipe) {
-        return "Error al ejecutar comando";
-    }
-    char buffer[128];
-    std::string result;
-    while (fgets(buffer, sizeof(buffer), pipe) != NULL) {
-        result += buffer;
-    }
-    pclose(pipe);
-    return result;
-}
-
 #endif 

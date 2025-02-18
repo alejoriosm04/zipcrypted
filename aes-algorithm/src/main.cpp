@@ -3,7 +3,6 @@
 #include <vector>
 #include <chrono>
 #include "ManejadorArchivo.h"
-#include "Util.h" 
 
 bool g_enableLogging = false;
 
@@ -66,6 +65,20 @@ bool validarArgumentos(const std::vector<std::string> &args, std::string &option
     }
     
     return true;
+}
+inline std::string getFileType(const std::string &filename) {
+    std::string command = "file " + filename;
+    FILE *pipe = popen(command.c_str(), "r");
+    if (!pipe) {
+        return "Error al ejecutar comando";
+    }
+    char buffer[128];
+    std::string result;
+    while (fgets(buffer, sizeof(buffer), pipe) != NULL) {
+        result += buffer;
+    }
+    pclose(pipe);
+    return result;
 }
 
 int main(int argc, char* argv[]) {
