@@ -1,0 +1,71 @@
+# Archivos compilados y objetos
+*.exe
+*.out
+*.app
+*.o
+*.a
+*.so
+*.dll
+*.dylib
+
+# Directorios de compilación
+build/
+bin/
+lib/
+Debug/
+Release/
+x64/
+x86/
+CMakeFiles/
+CMakeCache.txt
+aes
+
+# Dependencias externas (si no son submodules)
+dependencies/
+third_party/
+
+# Archivos de IDEs y editores
+.vs/
+.vscode/
+.idea/
+*.sln
+*.vcxproj*
+*.suo
+*.user
+*.filters
+*.code-workspace
+cmake-build-*/
+
+# Archivos temporales y de sistema
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+# Autotools
+autom4te.cache
+aclocal.m4
+compile
+configure
+depcomp
+install-sh
+missing
+Makefile.in
+*.m4
+
+# Coverage
+*.gcda
+*.gcno
+*.lcov
+
+# Paquetes de Conan
+conanbuildinfo.txt
+conaninfo.txt
+conan_imports_/
+
+# Vcpkg
+vcpkg_installed/
+
+# Documentación generada
+docs/html/
+docs/latex/
