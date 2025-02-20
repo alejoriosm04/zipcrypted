@@ -1,13 +1,11 @@
 #include "lzw_decompressor.h"
-
 #include <iostream>
 #include <unordered_map>
 #include <string>
-#include <fcntl.h>    
-#include <unistd.h>     
+#include <fcntl.h>
+#include <unistd.h>
 #include <sys/types.h>
 #include <sys/stat.h>
-
 
 static const int MAX_DICT_SIZE = 4096;
 static const int CLEAR_CODE = 256;
@@ -27,10 +25,8 @@ static bool writeAll(int fd, const void* buffer, size_t count) {
     return true;
 }
 
-
 static unsigned int bitBuffer = 0;
 static int bitCount = 0;
-
 static const int READ_BUF_SIZE = 4096;
 static unsigned char readBuffer[READ_BUF_SIZE];
 static ssize_t readBufPos = 0;
@@ -54,22 +50,22 @@ static int readCode12(int fd) {
         if(!refillBuffer(fd)) {
             if(bitCount == 0) return -1;
             else {
-                int code = bitBuffer & ((1 << bitCount)-1);
+                int code = bitBuffer;
                 bitBuffer = 0;
                 bitCount = 0;
                 return code;
             }
         }
         unsigned char byteVal = readBuffer[readBufPos++];
-        bitBuffer |= (byteVal << bitCount);
+        bitBuffer = (bitBuffer << 8) | byteVal;
         bitCount += 8;
     }
-    int code = bitBuffer & 0xFFF;
-    bitBuffer >>= 12;
+    int shift = bitCount - 12;
+    int code = (bitBuffer >> shift) & 0xFFF;
     bitCount -= 12;
+    bitBuffer &= ((1 << bitCount) - 1);
     return code;
 }
-
 
 static void resetDictionary(std::unordered_map<int, std::string>& dict) {
     dict.clear();
@@ -77,7 +73,6 @@ static void resetDictionary(std::unordered_map<int, std::string>& dict) {
     for(int i = 0; i < 256; ++i)
         dict[i] = std::string(1, static_cast<char>(i));
 }
-
 
 void decompressLZW(const std::string &inputFile, const std::string &outputFile) {
     int fdIn = open(inputFile.c_str(), O_RDONLY);
@@ -91,13 +86,10 @@ void decompressLZW(const std::string &inputFile, const std::string &outputFile) 
         close(fdIn);
         return;
     }
-
     bitBuffer = 0; bitCount = 0; readBufPos = 0; readBufEnd = 0;
-
     std::unordered_map<int, std::string> dict;
     resetDictionary(dict);
     int nextCode = FIRST_CODE;
-
     int oldCode = readCode12(fdIn);
     if(oldCode < 0) {
         std::cerr << "[decompressLZW] Archivo comprimido vacío o corrupto.\n";
@@ -110,11 +102,9 @@ void decompressLZW(const std::string &inputFile, const std::string &outputFile) 
         close(fdIn); close(fdOut);
         return;
     }
-
     while(true) {
         int newCode = readCode12(fdIn);
         if(newCode < 0) break;
-
         if(newCode == CLEAR_CODE) {
             resetDictionary(dict);
             nextCode = FIRST_CODE;
@@ -127,25 +117,21 @@ void decompressLZW(const std::string &inputFile, const std::string &outputFile) 
             }
             continue;
         }
-
         std::string entry;
         if(dict.find(newCode) != dict.end()) {
             entry = dict[newCode];
         } else {
             entry = oldString + oldString[0];
         }
-
         if(!writeAll(fdOut, entry.data(), entry.size())) {
             std::cerr << "[decompressLZW] Error al escribir 'entry'.\n";
             break;
         }
-
         if(nextCode < MAX_DICT_SIZE) {
             dict[nextCode++] = oldString + entry[0];
         }
         oldString = entry;
     }
-
     close(fdIn);
     close(fdOut);
     std::cout << "[decompressLZW] Descompresión exitosa: " << outputFile << "\n";

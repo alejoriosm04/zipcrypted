@@ -4,14 +4,13 @@
 #include <unordered_map>
 #include <string>
 #include <fcntl.h>
-#include <unistd.h>     
+#include <unistd.h>
 #include <sys/types.h>
 #include <sys/stat.h>
 
-
-static const int MAX_DICT_SIZE = 4096;   
-static const size_t SAMPLE_SIZE = 1000;    
-static const int CLEAR_CODE = 256;         
+static const int MAX_DICT_SIZE = 4096;
+static const size_t SAMPLE_SIZE = 1000;
+static const int CLEAR_CODE = 256;
 
 static bool writeAll(int fd, const void* buffer, size_t count) {
     const unsigned char* ptr = static_cast<const unsigned char*>(buffer);
@@ -40,30 +39,29 @@ static bool isBinaryFile(int fd) {
 }
 
 static unsigned int bitBuffer = 0;
-static int bitCount = 0;          
+static int bitCount = 0;
 
 static bool flushOutputBits(int fd) {
     while(bitCount >= 8) {
-        unsigned char byteOut = bitBuffer & 0xFF;
+        int shift = bitCount - 8;
+        unsigned char byteOut = (bitBuffer >> shift) & 0xFF;
         if (!writeAll(fd, &byteOut, 1)) return false;
-        bitBuffer >>= 8;
         bitCount -= 8;
+        bitBuffer &= ((1 << bitCount) - 1);
     }
     return true;
 }
 
-
 static bool writeCode12(int fd, int code) {
-    code &= 0xFFF; // Asegurar 12 bits
-    bitBuffer |= (code << bitCount);
+    code &= 0xFFF;
+    bitBuffer = (bitBuffer << 12) | code;
     bitCount += 12;
     return flushOutputBits(fd);
 }
 
-
 static bool flushRemainingBits(int fd) {
     if(bitCount > 0) {
-        unsigned char outByte = (bitBuffer & ((1 << bitCount)-1)) << (8 - bitCount);
+        unsigned char outByte = (bitBuffer << (8 - bitCount)) & 0xFF;
         if (!writeAll(fd, &outByte, 1)) return false;
     }
     bitBuffer = 0;
@@ -71,15 +69,13 @@ static bool flushRemainingBits(int fd) {
     return true;
 }
 
-
 static int resetDictionary(std::unordered_map<std::string,int> &dict) {
     dict.clear();
     dict.reserve(MAX_DICT_SIZE);
     for(int i = 0; i < 256; ++i)
         dict[std::string(1, static_cast<char>(i))] = i;
-    return 257;  
+    return 257;
 }
-
 
 void compressLZW(const std::string &inputFile, const std::string &outputFile) {
     int fdIn = open(inputFile.c_str(), O_RDONLY);
@@ -94,7 +90,6 @@ void compressLZW(const std::string &inputFile, const std::string &outputFile) {
         return;
     }
 
-    
     if(isBinaryFile(fdIn))
         std::cout << "[Info] Archivo detectado como BINARIO.\n";
     else
@@ -118,7 +113,7 @@ void compressLZW(const std::string &inputFile, const std::string &outputFile) {
             std::cerr << "[compressLZW] Error de lectura.\n";
             break;
         }
-        if(n == 0) { 
+        if(n == 0) {
             int code = dict[W];
             if(!writeCode12(fdOut, code))
                 std::cerr << "[compressLZW] Error escribiendo código final.\n";
@@ -133,7 +128,6 @@ void compressLZW(const std::string &inputFile, const std::string &outputFile) {
                 std::cerr << "[compressLZW] Error escribiendo código.\n";
                 break;
             }
-            
             if(nextCode < MAX_DICT_SIZE)
                 dict[WK] = nextCode++;
             else {
